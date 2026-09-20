@@ -38,5 +38,5 @@ export const presenter = {
 	name: 'Fernando Tagliarini',
 	credential: 'CRM-SP 139.154',
 	tagline: 'dermatologia que conecta',
-	instagram: undefined as string | undefined,
+	instagram: '@drfernandotagliarini' as string | undefined,
 };
