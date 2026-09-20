@@ -1,0 +1,527 @@
+{
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "totalFrames": 2354,
+  "segments": [
+    {
+      "index": 0,
+      "sourceStart": 1.28,
+      "sourceEnd": 9.56,
+      "editedStart": 0.0,
+      "editedEnd": 8.28,
+      "durationFrames": 248,
+      "trimBeforeFrames": 38,
+      "text": "Quando a gente fala em tratamento pra dermatite atópica, a maioria das pessoas pensa em pomada, antibiótico ou no máximo em injeção.",
+      "captions": [
+        {
+          "startFrame": 3,
+          "endFrame": 44,
+          "text": "quando a gente fala em"
+        },
+        {
+          "startFrame": 44,
+          "endFrame": 100,
+          "text": "tratamento pra dermatite atópica"
+        },
+        {
+          "startFrame": 110,
+          "endFrame": 142,
+          "text": "a maioria das pessoas pensa"
+        },
+        {
+          "startFrame": 142,
+          "endFrame": 169,
+          "text": "em pomada"
+        },
+        {
+          "startFrame": 174,
+          "endFrame": 234,
+          "text": "antibiótico ou no máximo em"
+        },
+        {
+          "startFrame": 234,
+          "endFrame": 245,
+          "text": "injeção"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "sourceStart": 10.12,
+      "sourceEnd": 18.2,
+      "editedStart": 8.28,
+      "editedEnd": 16.36,
+      "durationFrames": 243,
+      "trimBeforeFrames": 304,
+      "text": "Mas e se eu te dissesse que existe uma classe de medicamentos orais modernos e com ação rápida e profunda na inflamação?",
+      "captions": [
+        {
+          "startFrame": 251,
+          "endFrame": 284,
+          "text": "mas e se eu te"
+        },
+        {
+          "startFrame": 284,
+          "endFrame": 341,
+          "text": "dissesse que existe uma classe"
+        },
+        {
+          "startFrame": 341,
+          "endFrame": 415,
+          "text": "de medicamentos orais modernos e"
+        },
+        {
+          "startFrame": 415,
+          "endFrame": 466,
+          "text": "com ação rápida e profunda"
+        },
+        {
+          "startFrame": 466,
+          "endFrame": 488,
+          "text": "na inflamação"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "sourceStart": 18.78,
+      "sourceEnd": 21.02,
+      "editedStart": 16.36,
+      "editedEnd": 18.6,
+      "durationFrames": 67,
+      "trimBeforeFrames": 563,
+      "text": "São as chamadas pequenas moléculas.",
+      "captions": [
+        {
+          "startFrame": 494,
+          "endFrame": 555,
+          "text": "são as chamadas pequenas moléculas"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "sourceStart": 21.6,
+      "sourceEnd": 24.4,
+      "editedStart": 18.6,
+      "editedEnd": 21.4,
+      "durationFrames": 84,
+      "trimBeforeFrames": 648,
+      "text": "O nome até pode ser pequeno,",
+      "captions": [
+        {
+          "startFrame": 561,
+          "endFrame": 619,
+          "text": "o nome até pode ser"
+        },
+        {
+          "startFrame": 619,
+          "endFrame": 639,
+          "text": "pequeno"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "sourceStart": 24.76,
+      "sourceEnd": 27.94,
+      "editedStart": 21.4,
+      "editedEnd": 24.58,
+      "durationFrames": 95,
+      "trimBeforeFrames": 743,
+      "text": "mas o impacto pode ser gigante.",
+      "captions": [
+        {
+          "startFrame": 645,
+          "endFrame": 709,
+          "text": "mas o impacto pode ser"
+        },
+        {
+          "startFrame": 709,
+          "endFrame": 734,
+          "text": "gigante"
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "sourceStart": 29.32,
+      "sourceEnd": 34.62,
+      "editedStart": 24.58,
+      "editedEnd": 29.88,
+      "durationFrames": 159,
+      "trimBeforeFrames": 880,
+      "text": "Elas agem dentro da célula desligando o sinal informatório lá no núcleo,",
+      "captions": [
+        {
+          "startFrame": 740,
+          "endFrame": 805,
+          "text": "elas agem dentro da célula"
+        },
+        {
+          "startFrame": 805,
+          "endFrame": 880,
+          "text": "desligando o sinal informatório lá"
+        },
+        {
+          "startFrame": 880,
+          "endFrame": 893,
+          "text": "no núcleo"
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "sourceStart": 34.94,
+      "sourceEnd": 38.28,
+      "editedStart": 29.88,
+      "editedEnd": 33.22,
+      "durationFrames": 101,
+      "trimBeforeFrames": 1048,
+      "text": "como se fosse um botão de desligar a coceira.",
+      "captions": [
+        {
+          "startFrame": 899,
+          "endFrame": 948,
+          "text": "como se fosse um botão"
+        },
+        {
+          "startFrame": 948,
+          "endFrame": 994,
+          "text": "de desligar a coceira"
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "sourceStart": 38.98,
+      "sourceEnd": 41.86,
+      "editedStart": 33.22,
+      "editedEnd": 36.1,
+      "durationFrames": 86,
+      "trimBeforeFrames": 1169,
+      "text": "Uma dessas moléculas é o upadacitinibe,",
+      "captions": [
+        {
+          "startFrame": 1000,
+          "endFrame": 1057,
+          "text": "uma dessas moléculas é o"
+        },
+        {
+          "startFrame": 1057,
+          "endFrame": 1080,
+          "text": "upadacitinibe"
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "sourceStart": 42.2,
+      "sourceEnd": 43.42,
+      "editedStart": 36.1,
+      "editedEnd": 37.32,
+      "durationFrames": 37,
+      "trimBeforeFrames": 1266,
+      "text": "um comprimido,",
+      "captions": [
+        {
+          "startFrame": 1086,
+          "endFrame": 1117,
+          "text": "um comprimido"
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "sourceStart": 43.76,
+      "sourceEnd": 50.2,
+      "editedStart": 37.32,
+      "editedEnd": 43.76,
+      "durationFrames": 193,
+      "trimBeforeFrames": 1313,
+      "text": "tomado uma vez ao dia e que em poucos dias já pode mudar completamente o jogo.",
+      "captions": [
+        {
+          "startFrame": 1123,
+          "endFrame": 1172,
+          "text": "tomado uma vez ao dia"
+        },
+        {
+          "startFrame": 1172,
+          "endFrame": 1222,
+          "text": "e que em poucos dias"
+        },
+        {
+          "startFrame": 1222,
+          "endFrame": 1304,
+          "text": "já pode mudar completamente o"
+        },
+        {
+          "startFrame": 1304,
+          "endFrame": 1310,
+          "text": "jogo"
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "sourceStart": 51.4,
+      "sourceEnd": 57.86,
+      "editedStart": 43.76,
+      "editedEnd": 50.22,
+      "durationFrames": 194,
+      "trimBeforeFrames": 1542,
+      "text": "No caso do meu paciente, o sono voltou, o prurido cedeu, a vida começou a voltar.",
+      "captions": [
+        {
+          "startFrame": 1316,
+          "endFrame": 1360,
+          "text": "no caso do meu paciente"
+        },
+        {
+          "startFrame": 1370,
+          "endFrame": 1396,
+          "text": "o sono voltou"
+        },
+        {
+          "startFrame": 1408,
+          "endFrame": 1436,
+          "text": "o prurido cedeu"
+        },
+        {
+          "startFrame": 1447,
+          "endFrame": 1504,
+          "text": "a vida começou a voltar"
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "sourceStart": 58.42,
+      "sourceEnd": 65.42,
+      "editedStart": 50.22,
+      "editedEnd": 57.22,
+      "durationFrames": 210,
+      "trimBeforeFrames": 1753,
+      "text": "No próximo vídeo eu te explico a diferença entre essas pequenas moléculas e os famosos imunobiológicos.",
+      "captions": [
+        {
+          "startFrame": 1510,
+          "endFrame": 1553,
+          "text": "no próximo vídeo eu te"
+        },
+        {
+          "startFrame": 1553,
+          "endFrame": 1604,
+          "text": "explico a diferença entre essas"
+        },
+        {
+          "startFrame": 1604,
+          "endFrame": 1684,
+          "text": "pequenas moléculas e os famosos"
+        },
+        {
+          "startFrame": 1684,
+          "endFrame": 1714,
+          "text": "imunobiológicos"
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "sourceStart": 66.02,
+      "sourceEnd": 69.22,
+      "editedStart": 57.22,
+      "editedEnd": 60.42,
+      "durationFrames": 96,
+      "trimBeforeFrames": 1981,
+      "text": "E o spoiler não é sobre qual é o melhor,",
+      "captions": [
+        {
+          "startFrame": 1720,
+          "endFrame": 1774,
+          "text": "e o spoiler não é"
+        },
+        {
+          "startFrame": 1774,
+          "endFrame": 1810,
+          "text": "sobre qual é o melhor"
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "sourceStart": 69.54,
+      "sourceEnd": 72.68,
+      "editedStart": 60.42,
+      "editedEnd": 63.56,
+      "durationFrames": 94,
+      "trimBeforeFrames": 2086,
+      "text": "é sobre qual faz mais sentido pra cada paciente.",
+      "captions": [
+        {
+          "startFrame": 1816,
+          "endFrame": 1855,
+          "text": "é sobre qual faz mais"
+        },
+        {
+          "startFrame": 1855,
+          "endFrame": 1904,
+          "text": "sentido pra cada paciente"
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "sourceStart": 74.16,
+      "sourceEnd": 82.66,
+      "editedStart": 63.56,
+      "editedEnd": 72.06,
+      "durationFrames": 255,
+      "trimBeforeFrames": 2225,
+      "text": "Se esse vídeo fez sentido pra você ou pra alguém que conhece, salva ele e compartilhe com alguém que está lidando com a dermatite atópica,",
+      "captions": [
+        {
+          "startFrame": 1910,
+          "endFrame": 1961,
+          "text": "se esse vídeo fez sentido"
+        },
+        {
+          "startFrame": 1961,
+          "endFrame": 2002,
+          "text": "pra você ou pra alguém"
+        },
+        {
+          "startFrame": 2002,
+          "endFrame": 2021,
+          "text": "que conhece"
+        },
+        {
+          "startFrame": 2027,
+          "endFrame": 2096,
+          "text": "salva ele e compartilhe com"
+        },
+        {
+          "startFrame": 2096,
+          "endFrame": 2130,
+          "text": "alguém que está lidando com"
+        },
+        {
+          "startFrame": 2130,
+          "endFrame": 2159,
+          "text": "a dermatite atópica"
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "sourceStart": 83.0,
+      "sourceEnd": 87.84,
+      "editedStart": 72.06,
+      "editedEnd": 76.9,
+      "durationFrames": 145,
+      "trimBeforeFrames": 2490,
+      "text": "porque é assim que a gente leva a dermatologia do consultório pro feed,",
+      "captions": [
+        {
+          "startFrame": 2165,
+          "endFrame": 2189,
+          "text": "porque é assim que a"
+        },
+        {
+          "startFrame": 2189,
+          "endFrame": 2246,
+          "text": "gente leva a dermatologia do"
+        },
+        {
+          "startFrame": 2246,
+          "endFrame": 2304,
+          "text": "consultório pro feed"
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "sourceStart": 88.1,
+      "sourceEnd": 89.68,
+      "editedStart": 76.9,
+      "editedEnd": 78.48,
+      "durationFrames": 47,
+      "trimBeforeFrames": 2643,
+      "text": "dermatologia que conecta.",
+      "captions": [
+        {
+          "startFrame": 2310,
+          "endFrame": 2351,
+          "text": "dermatologia que conecta"
+        }
+      ]
+    }
+  ],
+  "keywordEvents": [
+    {
+      "frame": 160,
+      "endFrame": 187,
+      "word": "POMADA"
+    },
+    {
+      "frame": 174,
+      "endFrame": 201,
+      "word": "ANTIBIÓTICO"
+    },
+    {
+      "frame": 234,
+      "endFrame": 261,
+      "word": "INJEÇÃO"
+    },
+    {
+      "frame": 1057,
+      "endFrame": 1099,
+      "word": "UPADACITINIBE"
+    }
+  ],
+  "sfxEvents": [
+    {
+      "frame": 160,
+      "type": "pop"
+    },
+    {
+      "frame": 174,
+      "type": "pop"
+    },
+    {
+      "frame": 234,
+      "type": "pop"
+    },
+    {
+      "frame": 248,
+      "type": "whoosh"
+    },
+    {
+      "frame": 737,
+      "type": "whoosh"
+    },
+    {
+      "frame": 997,
+      "type": "whoosh"
+    },
+    {
+      "frame": 1057,
+      "type": "hit"
+    },
+    {
+      "frame": 1313,
+      "type": "whoosh"
+    }
+  ],
+  "zoomEmphasisIndices": [
+    1,
+    7,
+    10
+  ],
+  "motionGraphics": {
+    "startFrame": 737,
+    "endFrame": 997
+  }
+}

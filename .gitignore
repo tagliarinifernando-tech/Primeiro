@@ -2,3 +2,7 @@ raw/
 out/
 node_modules/
 *.pt
+remotion/public/CRU.mp4
+remotion/public/audio/
+remotion/frame*.png
+remotion/kf_*.png
