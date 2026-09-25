@@ -1,0 +1,590 @@
+{
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "totalFrames": 1809,
+  "segments": [
+    {
+      "index": 0,
+      "sourceStart": 0,
+      "sourceEnd": 4.02,
+      "editedStart": 0.0,
+      "editedEnd": 4.02,
+      "durationFrames": 121,
+      "trimBeforeFrames": 0,
+      "text": "Tenho duas notícias. Uma cabe na mochila, a outra não.",
+      "captions": [
+        {
+          "startFrame": 0,
+          "endFrame": 56,
+          "text": "tenho duas notícias"
+        },
+        {
+          "startFrame": 68,
+          "endFrame": 97,
+          "text": "uma cabe na mochila"
+        },
+        {
+          "startFrame": 105,
+          "endFrame": 118,
+          "text": "a outra não"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "sourceStart": 4.84,
+      "sourceEnd": 6.98,
+      "editedStart": 4.02,
+      "editedEnd": 6.16,
+      "durationFrames": 64,
+      "trimBeforeFrames": 145,
+      "text": "Ano passado eu fui pro EADV.",
+      "captions": [
+        {
+          "startFrame": 124,
+          "endFrame": 182,
+          "text": "ano passado eu fui pro eadv"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "sourceStart": 7.46,
+      "sourceEnd": 9.68,
+      "editedStart": 6.16,
+      "editedEnd": 8.38,
+      "durationFrames": 66,
+      "trimBeforeFrames": 224,
+      "text": "O maior congresso de dermatologia da Europa,",
+      "captions": [
+        {
+          "startFrame": 188,
+          "endFrame": 230,
+          "text": "o maior congresso de dermatologia"
+        },
+        {
+          "startFrame": 230,
+          "endFrame": 248,
+          "text": "da europa"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "sourceStart": 10.06,
+      "sourceEnd": 11.48,
+      "editedStart": 8.38,
+      "editedEnd": 9.8,
+      "durationFrames": 43,
+      "trimBeforeFrames": 302,
+      "text": "em Paris.",
+      "captions": [
+        {
+          "startFrame": 254,
+          "endFrame": 291,
+          "text": "em paris"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "sourceStart": 12.22,
+      "sourceEnd": 12.84,
+      "editedStart": 9.8,
+      "editedEnd": 10.42,
+      "durationFrames": 19,
+      "trimBeforeFrames": 367,
+      "text": "De pijama.",
+      "captions": [
+        {
+          "startFrame": 297,
+          "endFrame": 310,
+          "text": "de pijama"
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "sourceStart": 13.5,
+      "sourceEnd": 14.32,
+      "editedStart": 10.42,
+      "editedEnd": 11.24,
+      "durationFrames": 24,
+      "trimBeforeFrames": 405,
+      "text": "Pelo notebook.",
+      "captions": [
+        {
+          "startFrame": 316,
+          "endFrame": 334,
+          "text": "pelo notebook"
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "sourceStart": 14.72,
+      "sourceEnd": 16.18,
+      "editedStart": 11.24,
+      "editedEnd": 12.7,
+      "durationFrames": 44,
+      "trimBeforeFrames": 442,
+      "text": "Esse ano, em vez de pijama,",
+      "captions": [
+        {
+          "startFrame": 340,
+          "endFrame": 355,
+          "text": "esse ano"
+        },
+        {
+          "startFrame": 357,
+          "endFrame": 378,
+          "text": "em vez de pijama"
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "sourceStart": 16.66,
+      "sourceEnd": 17.54,
+      "editedStart": 12.7,
+      "editedEnd": 13.58,
+      "durationFrames": 26,
+      "trimBeforeFrames": 500,
+      "text": "passaporte.",
+      "captions": [
+        {
+          "startFrame": 384,
+          "endFrame": 404,
+          "text": "passaporte"
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "sourceStart": 18.9,
+      "sourceEnd": 19.78,
+      "editedStart": 13.58,
+      "editedEnd": 14.46,
+      "durationFrames": 27,
+      "trimBeforeFrames": 567,
+      "text": "Viena.",
+      "captions": [
+        {
+          "startFrame": 410,
+          "endFrame": 431,
+          "text": "viena"
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "sourceStart": 20.06,
+      "sourceEnd": 20.94,
+      "editedStart": 14.46,
+      "editedEnd": 15.34,
+      "durationFrames": 26,
+      "trimBeforeFrames": 602,
+      "text": "Presencial.",
+      "captions": [
+        {
+          "startFrame": 437,
+          "endFrame": 457,
+          "text": "presencial"
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "sourceStart": 22.56,
+      "sourceEnd": 24.94,
+      "editedStart": 15.34,
+      "editedEnd": 17.72,
+      "durationFrames": 72,
+      "trimBeforeFrames": 677,
+      "text": "Dessa vez, eu não vou assistir palestra.",
+      "captions": [
+        {
+          "startFrame": 463,
+          "endFrame": 488,
+          "text": "dessa vez"
+        },
+        {
+          "startFrame": 491,
+          "endFrame": 529,
+          "text": "eu não vou assistir palestra"
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "sourceStart": 26.02,
+      "sourceEnd": 28.3,
+      "editedStart": 17.72,
+      "editedEnd": 20.0,
+      "durationFrames": 68,
+      "trimBeforeFrames": 781,
+      "text": "Eu fui pro congresso, tenho duas missões.",
+      "captions": [
+        {
+          "startFrame": 535,
+          "endFrame": 567,
+          "text": "eu fui pro congresso"
+        },
+        {
+          "startFrame": 572,
+          "endFrame": 597,
+          "text": "tenho duas missões"
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "sourceStart": 29.82,
+      "sourceEnd": 38.02,
+      "editedStart": 20.0,
+      "editedEnd": 28.2,
+      "durationFrames": 246,
+      "trimBeforeFrames": 895,
+      "text": "Na primeira, eu fui convidado para ajudar a conduzir o encontro de dermatologistas que trata psoríase com biológicos,",
+      "captions": [
+        {
+          "startFrame": 603,
+          "endFrame": 631,
+          "text": "na primeira"
+        },
+        {
+          "startFrame": 638,
+          "endFrame": 707,
+          "text": "eu fui convidado para ajudar"
+        },
+        {
+          "startFrame": 707,
+          "endFrame": 743,
+          "text": "a conduzir o encontro de"
+        },
+        {
+          "startFrame": 743,
+          "endFrame": 817,
+          "text": "dermatologistas que trata psoríase com"
+        },
+        {
+          "startFrame": 817,
+          "endFrame": 843,
+          "text": "biológicos"
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "sourceStart": 38.36,
+      "sourceEnd": 40.06,
+      "editedStart": 28.2,
+      "editedEnd": 29.9,
+      "durationFrames": 51,
+      "trimBeforeFrames": 1151,
+      "text": "discutindo casos reais.",
+      "captions": [
+        {
+          "startFrame": 849,
+          "endFrame": 894,
+          "text": "discutindo casos reais"
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "sourceStart": 41.22,
+      "sourceEnd": 42.0,
+      "editedStart": 29.9,
+      "editedEnd": 30.68,
+      "durationFrames": 23,
+      "trimBeforeFrames": 1237,
+      "text": "Na segunda,",
+      "captions": [
+        {
+          "startFrame": 900,
+          "endFrame": 917,
+          "text": "na segunda"
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "sourceStart": 42.24,
+      "sourceEnd": 44.06,
+      "editedStart": 30.68,
+      "editedEnd": 32.5,
+      "durationFrames": 55,
+      "trimBeforeFrames": 1267,
+      "text": "vou participar de um board internacional.",
+      "captions": [
+        {
+          "startFrame": 923,
+          "endFrame": 951,
+          "text": "vou participar de um board"
+        },
+        {
+          "startFrame": 951,
+          "endFrame": 972,
+          "text": "internacional"
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "sourceStart": 45.14,
+      "sourceEnd": 52.1,
+      "editedStart": 32.5,
+      "editedEnd": 39.46,
+      "durationFrames": 209,
+      "trimBeforeFrames": 1354,
+      "text": "Médicos de vários países na mesma mesa discutindo como é tratar de psoríase na vida real.",
+      "captions": [
+        {
+          "startFrame": 978,
+          "endFrame": 1028,
+          "text": "médicos de vários países na"
+        },
+        {
+          "startFrame": 1028,
+          "endFrame": 1126,
+          "text": "mesma mesa discutindo como é"
+        },
+        {
+          "startFrame": 1126,
+          "endFrame": 1172,
+          "text": "tratar de psoríase na vida"
+        },
+        {
+          "startFrame": 1172,
+          "endFrame": 1181,
+          "text": "real"
+        }
+      ]
+    },
+    {
+      "index": 17,
+      "sourceStart": 53.86,
+      "sourceEnd": 60.66,
+      "editedStart": 39.46,
+      "editedEnd": 46.26,
+      "durationFrames": 204,
+      "trimBeforeFrames": 1616,
+      "text": "Eu levo a realidade do paciente brasileiro porque tratamento de ponta não pode ficar só no congresso,",
+      "captions": [
+        {
+          "startFrame": 1187,
+          "endFrame": 1234,
+          "text": "eu levo a realidade do"
+        },
+        {
+          "startFrame": 1234,
+          "endFrame": 1324,
+          "text": "paciente brasileiro porque tratamento de"
+        },
+        {
+          "startFrame": 1324,
+          "endFrame": 1366,
+          "text": "ponta não pode ficar só"
+        },
+        {
+          "startFrame": 1366,
+          "endFrame": 1385,
+          "text": "no congresso"
+        }
+      ]
+    },
+    {
+      "index": 18,
+      "sourceStart": 61.42,
+      "sourceEnd": 63.22,
+      "editedStart": 46.26,
+      "editedEnd": 48.06,
+      "durationFrames": 54,
+      "trimBeforeFrames": 1843,
+      "text": "tem que chegar no consultório.",
+      "captions": [
+        {
+          "startFrame": 1391,
+          "endFrame": 1439,
+          "text": "tem que chegar no consultório"
+        }
+      ]
+    },
+    {
+      "index": 19,
+      "sourceStart": 65.98,
+      "sourceEnd": 68.98,
+      "editedStart": 48.06,
+      "editedEnd": 51.06,
+      "durationFrames": 90,
+      "trimBeforeFrames": 1979,
+      "text": "Cabe tudo nessa mochila, menos o casaco.",
+      "captions": [
+        {
+          "startFrame": 1445,
+          "endFrame": 1492,
+          "text": "cabe tudo nessa mochila"
+        },
+        {
+          "startFrame": 1502,
+          "endFrame": 1529,
+          "text": "menos o casaco"
+        }
+      ]
+    },
+    {
+      "index": 20,
+      "sourceStart": 72.34,
+      "sourceEnd": 75.3,
+      "editedStart": 51.06,
+      "editedEnd": 54.02,
+      "durationFrames": 89,
+      "trimBeforeFrames": 2170,
+      "text": "Fiquem ligados porque vou mostrar os bastidores por aqui.",
+      "captions": [
+        {
+          "startFrame": 1535,
+          "endFrame": 1588,
+          "text": "fiquem ligados porque vou mostrar"
+        },
+        {
+          "startFrame": 1588,
+          "endFrame": 1618,
+          "text": "os bastidores por aqui"
+        }
+      ]
+    },
+    {
+      "index": 21,
+      "sourceStart": 76.18,
+      "sourceEnd": 77.96,
+      "editedStart": 54.02,
+      "editedEnd": 55.8,
+      "durationFrames": 53,
+      "trimBeforeFrames": 2285,
+      "text": "Ah, e a outra notícia?",
+      "captions": [
+        {
+          "startFrame": 1624,
+          "endFrame": 1671,
+          "text": "ah, e a outra notícia"
+        }
+      ]
+    },
+    {
+      "index": 22,
+      "sourceStart": 79.78,
+      "sourceEnd": 81.42,
+      "editedStart": 55.8,
+      "editedEnd": 57.44,
+      "durationFrames": 49,
+      "trimBeforeFrames": 2393,
+      "text": "Essa também não cabe na mochila.",
+      "captions": [
+        {
+          "startFrame": 1677,
+          "endFrame": 1709,
+          "text": "essa também não cabe na"
+        },
+        {
+          "startFrame": 1709,
+          "endFrame": 1720,
+          "text": "mochila"
+        }
+      ]
+    },
+    {
+      "index": 23,
+      "sourceStart": 81.82,
+      "sourceEnd": 82.98,
+      "editedStart": 57.44,
+      "editedEnd": 58.6,
+      "durationFrames": 35,
+      "trimBeforeFrames": 2455,
+      "text": "Fica para a próxima.",
+      "captions": [
+        {
+          "startFrame": 1726,
+          "endFrame": 1755,
+          "text": "fica para a próxima"
+        }
+      ]
+    },
+    {
+      "index": 24,
+      "sourceStart": 83.66,
+      "sourceEnd": 85.36,
+      "editedStart": 58.6,
+      "editedEnd": 60.3,
+      "durationFrames": 51,
+      "trimBeforeFrames": 2510,
+      "text": "Agora deixa eu ir, que estão chamando meu voo.",
+      "captions": [
+        {
+          "startFrame": 1761,
+          "endFrame": 1781,
+          "text": "agora deixa eu ir"
+        },
+        {
+          "startFrame": 1781,
+          "endFrame": 1806,
+          "text": "que estão chamando meu voo"
+        }
+      ]
+    }
+  ],
+  "keywordEvents": [
+    {
+      "frame": 121,
+      "endFrame": 185,
+      "word": "EADV"
+    }
+  ],
+  "sfxEvents": [
+    {
+      "frame": 121,
+      "type": "pop"
+    },
+    {
+      "frame": 294,
+      "type": "whoosh"
+    },
+    {
+      "frame": 460,
+      "type": "whoosh"
+    },
+    {
+      "frame": 532,
+      "type": "whoosh"
+    },
+    {
+      "frame": 1184,
+      "type": "whoosh"
+    },
+    {
+      "frame": 1723,
+      "type": "whoosh"
+    }
+  ],
+  "zoomEmphasisIndices": [
+    10,
+    17,
+    23
+  ],
+  "motionGraphics1": {
+    "startFrame": 294,
+    "endFrame": 460
+  },
+  "motionGraphics2": {
+    "startFrame": 532,
+    "endFrame": 600
+  },
+  "crop": {
+    "sourceWidth": 2560,
+    "sourceHeight": 1080,
+    "cropWidth": 608,
+    "cropX": 976
+  }
+}

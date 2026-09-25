@@ -4,6 +4,7 @@ out/
 node_modules/
 *.pt
 remotion/public/CRU.mp4
+remotion/public/CRU2.mov
 remotion/public/audio/
 remotion/frame*.png
 remotion/kf_*.png
