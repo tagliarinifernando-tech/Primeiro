@@ -1,7 +1,7 @@
 {
   "fps": 30,
-  "width": 1080,
-  "height": 1920,
+  "width": 1920,
+  "height": 1080,
   "totalFrames": 1809,
   "segments": [
     {
@@ -584,7 +584,7 @@
   "crop": {
     "sourceWidth": 2560,
     "sourceHeight": 1080,
-    "cropWidth": 608,
-    "cropX": 976
+    "cropWidth": 1920,
+    "cropX": 320
   }
 }
