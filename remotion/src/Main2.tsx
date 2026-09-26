@@ -105,6 +105,7 @@ export const Main2: React.FC = () => {
 			/>
 
 			<Audio src={staticFile('audio/voice2.wav')} />
+			<Audio src={staticFile('audio/ambience2.wav')} />
 
 			{editData2.sfxEvents.map((event, i) => (
 				<Sequence key={i} from={event.frame} durationInFrames={30}>
