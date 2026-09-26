@@ -113,6 +113,14 @@ export const Main2: React.FC = () => {
 				</Sequence>
 			))}
 
+			{/* distant PA boarding chime, twice, well clear of speech */}
+			<Sequence from={345} durationInFrames={60}>
+				<Audio src={staticFile('sfx/chime.wav')} />
+			</Sequence>
+			<Sequence from={1830} durationInFrames={60}>
+				<Audio src={staticFile('sfx/chime.wav')} />
+			</Sequence>
+
 			<AbsoluteFill style={{backgroundColor: '#000000', opacity: fadeOutOpacity}} />
 		</AbsoluteFill>
 	);
