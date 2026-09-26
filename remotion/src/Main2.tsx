@@ -92,7 +92,12 @@ export const Main2: React.FC = () => {
 					topPercent={72}
 				/>
 			)}
-			<KeywordStack events={editData2.keywordEvents} frame={frame} />
+			<KeywordStack
+				events={editData2.keywordEvents}
+				frame={frame}
+				position="right"
+				fontSize={120}
+			/>
 
 			<Audio src={staticFile('audio/voice2.wav')} />
 

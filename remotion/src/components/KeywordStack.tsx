@@ -3,10 +3,10 @@ import {spring, useCurrentFrame, useVideoConfig} from 'remotion';
 import {theme} from '../theme';
 import type {KeywordEvent} from '../data';
 
-const KeywordItem: React.FC<{event: KeywordEvent; frame: number; big?: boolean}> = ({
+const KeywordItem: React.FC<{event: KeywordEvent; frame: number; fontSize: number}> = ({
 	event,
 	frame,
-	big,
+	fontSize,
 }) => {
 	const {fps} = useVideoConfig();
 	const localFrame = frame - event.frame;
@@ -22,7 +22,7 @@ const KeywordItem: React.FC<{event: KeywordEvent; frame: number; big?: boolean}>
 			style={{
 				fontFamily: theme.fontFamily,
 				fontWeight: 900,
-				fontSize: big ? 76 : 58,
+				fontSize,
 				color: '#FFFFFF',
 				textShadow: theme.glow,
 				textAlign: 'center',
@@ -35,13 +35,19 @@ const KeywordItem: React.FC<{event: KeywordEvent; frame: number; big?: boolean}>
 	);
 };
 
-export const KeywordStack: React.FC<{events: KeywordEvent[]; frame: number; big?: boolean}> = ({
-	events,
-	frame,
-	big,
-}) => {
+export const KeywordStack: React.FC<{
+	events: KeywordEvent[];
+	frame: number;
+	big?: boolean;
+	position?: 'center' | 'left' | 'right';
+	fontSize?: number;
+}> = ({events, frame, big, position = 'center', fontSize}) => {
 	const active = events.filter((e) => frame >= e.frame && frame < e.endFrame);
 	if (active.length === 0) return null;
+
+	const justifyContent =
+		position === 'left' ? 'flex-start' : position === 'right' ? 'flex-end' : 'center';
+	const sidePadding = position === 'center' ? 0 : 90;
 
 	return (
 		<div
@@ -53,13 +59,20 @@ export const KeywordStack: React.FC<{events: KeywordEvent[]; frame: number; big?
 				bottom: 0,
 				display: 'flex',
 				flexDirection: 'column',
-				alignItems: 'center',
+				alignItems: justifyContent,
 				justifyContent: 'center',
 				gap: 18,
+				paddingLeft: sidePadding,
+				paddingRight: sidePadding,
 			}}
 		>
 			{active.map((e) => (
-				<KeywordItem key={e.word} event={e} frame={frame} big={big} />
+				<KeywordItem
+					key={e.word}
+					event={e}
+					frame={frame}
+					fontSize={fontSize ?? (big ? 76 : 58)}
+				/>
 			))}
 		</div>
 	);
