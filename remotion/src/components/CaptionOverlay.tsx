@@ -9,6 +9,7 @@ interface CaptionStyleProps {
 	fontSize?: number;
 	color?: string;
 	uppercase?: boolean;
+	topPercent?: number;
 }
 
 const AnimatedWord: React.FC<{
@@ -47,6 +48,7 @@ export const CaptionOverlay: React.FC<{captions: Caption[]; frame: number} & Cap
 	fontSize,
 	color,
 	uppercase,
+	topPercent,
 }) => {
 	const active = captions.find((c) => frame >= c.startFrame && frame < c.endFrame);
 	if (!active) return null;
@@ -63,7 +65,7 @@ export const CaptionOverlay: React.FC<{captions: Caption[]; frame: number} & Cap
 		<div
 			style={{
 				position: 'absolute',
-				top: '55%',
+				top: `${topPercent ?? 55}%`,
 				left: 0,
 				right: 0,
 				display: 'flex',

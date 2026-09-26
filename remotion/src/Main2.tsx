@@ -89,6 +89,7 @@ export const Main2: React.FC = () => {
 					fontWeight={400}
 					fontSize={46}
 					uppercase
+					topPercent={72}
 				/>
 			)}
 			<KeywordStack events={editData2.keywordEvents} frame={frame} />
