@@ -15,7 +15,12 @@ import {CaptionOverlay} from './components/CaptionOverlay';
 import {KeywordStack} from './components/KeywordStack';
 import {MotionGraphicsBeforeAfter} from './components/MotionGraphicsBeforeAfter';
 import {MotionGraphicsMissions} from './components/MotionGraphicsMissions';
+import {AnamorphicFlare} from './components/AnamorphicFlare';
 import {theme} from './theme';
+
+// Bright ceiling spotlight, in SOURCE pixel coordinates - the camera is a
+// fixed tripod shot for the whole take, so one anchor works throughout.
+const FLARE_ANCHOR = {x: 973, y: 207};
 
 const allCaptions = editData2.segments.flatMap((s) => s.captions);
 
@@ -121,6 +126,8 @@ const SegmentVideo2: React.FC<{
 	const frame = useCurrentFrame();
 	const {scale, translateXPercent} = getSegmentTransform(segment, frame, isEmphasis);
 	const {translateX, translateY, totalScale} = getCropTransform(scale, translateXPercent);
+	const flareX = translateX + FLARE_ANCHOR.x * totalScale;
+	const flareY = translateY + FLARE_ANCHOR.y * totalScale;
 
 	return (
 		<AbsoluteFill style={{overflow: 'hidden'}}>
@@ -140,6 +147,7 @@ const SegmentVideo2: React.FC<{
 					filter: 'contrast(1.08) saturate(1.15) brightness(1.02) sepia(0.06)',
 				}}
 			/>
+			<AnamorphicFlare x={flareX} y={flareY} />
 		</AbsoluteFill>
 	);
 };
