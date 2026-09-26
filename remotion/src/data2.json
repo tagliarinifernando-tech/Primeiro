@@ -2,7 +2,7 @@
   "fps": 30,
   "width": 1920,
   "height": 1080,
-  "totalFrames": 1809,
+  "totalFrames": 1897,
   "segments": [
     {
       "index": 0,
@@ -17,17 +17,73 @@
         {
           "startFrame": 0,
           "endFrame": 56,
-          "text": "tenho duas notícias"
+          "text": "tenho duas notícias",
+          "words": [
+            {
+              "text": "tenho",
+              "startFrame": 0,
+              "endFrame": 35
+            },
+            {
+              "text": "duas",
+              "startFrame": 35,
+              "endFrame": 43
+            },
+            {
+              "text": "notícias",
+              "startFrame": 43,
+              "endFrame": 56
+            }
+          ]
         },
         {
           "startFrame": 68,
           "endFrame": 97,
-          "text": "uma cabe na mochila"
+          "text": "uma cabe na mochila",
+          "words": [
+            {
+              "text": "uma",
+              "startFrame": 68,
+              "endFrame": 74
+            },
+            {
+              "text": "cabe",
+              "startFrame": 74,
+              "endFrame": 80
+            },
+            {
+              "text": "na",
+              "startFrame": 80,
+              "endFrame": 85
+            },
+            {
+              "text": "mochila",
+              "startFrame": 85,
+              "endFrame": 97
+            }
+          ]
         },
         {
           "startFrame": 105,
           "endFrame": 118,
-          "text": "a outra não"
+          "text": "a outra não",
+          "words": [
+            {
+              "text": "a",
+              "startFrame": 105,
+              "endFrame": 106
+            },
+            {
+              "text": "outra",
+              "startFrame": 106,
+              "endFrame": 110
+            },
+            {
+              "text": "não",
+              "startFrame": 110,
+              "endFrame": 118
+            }
+          ]
         }
       ]
     },
@@ -44,7 +100,14 @@
         {
           "startFrame": 124,
           "endFrame": 182,
-          "text": "ano passado eu fui pro eadv"
+          "text": "ano passado eu fui pro eadv",
+          "words": [
+            {
+              "text": "ano passado eu fui pro eadv",
+              "startFrame": 124,
+              "endFrame": 182
+            }
+          ]
         }
       ]
     },
@@ -61,12 +124,51 @@
         {
           "startFrame": 188,
           "endFrame": 230,
-          "text": "o maior congresso de dermatologia"
+          "text": "o maior congresso de dermatologia",
+          "words": [
+            {
+              "text": "o",
+              "startFrame": 188,
+              "endFrame": 194
+            },
+            {
+              "text": "maior",
+              "startFrame": 194,
+              "endFrame": 198
+            },
+            {
+              "text": "congresso",
+              "startFrame": 198,
+              "endFrame": 211
+            },
+            {
+              "text": "de",
+              "startFrame": 211,
+              "endFrame": 215
+            },
+            {
+              "text": "dermatologia",
+              "startFrame": 215,
+              "endFrame": 230
+            }
+          ]
         },
         {
           "startFrame": 230,
           "endFrame": 248,
-          "text": "da europa"
+          "text": "da europa",
+          "words": [
+            {
+              "text": "da",
+              "startFrame": 230,
+              "endFrame": 238
+            },
+            {
+              "text": "europa",
+              "startFrame": 238,
+              "endFrame": 248
+            }
+          ]
         }
       ]
     },
@@ -83,7 +185,19 @@
         {
           "startFrame": 254,
           "endFrame": 291,
-          "text": "em paris"
+          "text": "em paris",
+          "words": [
+            {
+              "text": "em",
+              "startFrame": 254,
+              "endFrame": 280
+            },
+            {
+              "text": "paris",
+              "startFrame": 280,
+              "endFrame": 291
+            }
+          ]
         }
       ]
     },
@@ -100,7 +214,19 @@
         {
           "startFrame": 297,
           "endFrame": 310,
-          "text": "de pijama"
+          "text": "de pijama",
+          "words": [
+            {
+              "text": "de",
+              "startFrame": 297,
+              "endFrame": 299
+            },
+            {
+              "text": "pijama",
+              "startFrame": 299,
+              "endFrame": 310
+            }
+          ]
         }
       ]
     },
@@ -117,7 +243,19 @@
         {
           "startFrame": 316,
           "endFrame": 334,
-          "text": "pelo notebook"
+          "text": "pelo notebook",
+          "words": [
+            {
+              "text": "pelo",
+              "startFrame": 316,
+              "endFrame": 326
+            },
+            {
+              "text": "notebook",
+              "startFrame": 326,
+              "endFrame": 334
+            }
+          ]
         }
       ]
     },
@@ -134,12 +272,46 @@
         {
           "startFrame": 340,
           "endFrame": 355,
-          "text": "esse ano"
+          "text": "esse ano",
+          "words": [
+            {
+              "text": "esse",
+              "startFrame": 340,
+              "endFrame": 350
+            },
+            {
+              "text": "ano",
+              "startFrame": 350,
+              "endFrame": 355
+            }
+          ]
         },
         {
           "startFrame": 357,
           "endFrame": 378,
-          "text": "em vez de pijama"
+          "text": "em vez de pijama",
+          "words": [
+            {
+              "text": "em",
+              "startFrame": 357,
+              "endFrame": 359
+            },
+            {
+              "text": "vez",
+              "startFrame": 359,
+              "endFrame": 362
+            },
+            {
+              "text": "de",
+              "startFrame": 362,
+              "endFrame": 365
+            },
+            {
+              "text": "pijama",
+              "startFrame": 365,
+              "endFrame": 378
+            }
+          ]
         }
       ]
     },
@@ -156,7 +328,14 @@
         {
           "startFrame": 384,
           "endFrame": 404,
-          "text": "passaporte"
+          "text": "passaporte",
+          "words": [
+            {
+              "text": "passaporte",
+              "startFrame": 384,
+              "endFrame": 404
+            }
+          ]
         }
       ]
     },
@@ -173,7 +352,14 @@
         {
           "startFrame": 410,
           "endFrame": 431,
-          "text": "viena"
+          "text": "viena",
+          "words": [
+            {
+              "text": "viena",
+              "startFrame": 410,
+              "endFrame": 431
+            }
+          ]
         }
       ]
     },
@@ -190,7 +376,14 @@
         {
           "startFrame": 437,
           "endFrame": 457,
-          "text": "presencial"
+          "text": "presencial",
+          "words": [
+            {
+              "text": "presencial",
+              "startFrame": 437,
+              "endFrame": 457
+            }
+          ]
         }
       ]
     },
@@ -207,12 +400,51 @@
         {
           "startFrame": 463,
           "endFrame": 488,
-          "text": "dessa vez"
+          "text": "dessa vez",
+          "words": [
+            {
+              "text": "dessa",
+              "startFrame": 463,
+              "endFrame": 481
+            },
+            {
+              "text": "vez",
+              "startFrame": 481,
+              "endFrame": 488
+            }
+          ]
         },
         {
           "startFrame": 491,
           "endFrame": 529,
-          "text": "eu não vou assistir palestra"
+          "text": "eu não vou assistir palestra",
+          "words": [
+            {
+              "text": "eu",
+              "startFrame": 491,
+              "endFrame": 493
+            },
+            {
+              "text": "não",
+              "startFrame": 493,
+              "endFrame": 497
+            },
+            {
+              "text": "vou",
+              "startFrame": 497,
+              "endFrame": 502
+            },
+            {
+              "text": "assistir",
+              "startFrame": 502,
+              "endFrame": 513
+            },
+            {
+              "text": "palestra",
+              "startFrame": 513,
+              "endFrame": 529
+            }
+          ]
         }
       ]
     },
@@ -229,12 +461,51 @@
         {
           "startFrame": 535,
           "endFrame": 567,
-          "text": "eu fui pro congresso"
+          "text": "eu fui pro congresso",
+          "words": [
+            {
+              "text": "eu",
+              "startFrame": 535,
+              "endFrame": 554
+            },
+            {
+              "text": "fui",
+              "startFrame": 554,
+              "endFrame": 556
+            },
+            {
+              "text": "pro",
+              "startFrame": 556,
+              "endFrame": 560
+            },
+            {
+              "text": "congresso",
+              "startFrame": 560,
+              "endFrame": 567
+            }
+          ]
         },
         {
           "startFrame": 572,
           "endFrame": 597,
-          "text": "tenho duas missões"
+          "text": "tenho duas missões",
+          "words": [
+            {
+              "text": "tenho",
+              "startFrame": 572,
+              "endFrame": 575
+            },
+            {
+              "text": "duas",
+              "startFrame": 575,
+              "endFrame": 587
+            },
+            {
+              "text": "missões",
+              "startFrame": 587,
+              "endFrame": 597
+            }
+          ]
         }
       ]
     },
@@ -251,27 +522,127 @@
         {
           "startFrame": 603,
           "endFrame": 631,
-          "text": "na primeira"
+          "text": "na primeira",
+          "words": [
+            {
+              "text": "na",
+              "startFrame": 603,
+              "endFrame": 619
+            },
+            {
+              "text": "primeira",
+              "startFrame": 619,
+              "endFrame": 631
+            }
+          ]
         },
         {
           "startFrame": 638,
           "endFrame": 707,
-          "text": "eu fui convidado para ajudar"
+          "text": "eu fui convidado para ajudar",
+          "words": [
+            {
+              "text": "eu",
+              "startFrame": 638,
+              "endFrame": 638
+            },
+            {
+              "text": "fui",
+              "startFrame": 638,
+              "endFrame": 641
+            },
+            {
+              "text": "convidado",
+              "startFrame": 641,
+              "endFrame": 661
+            },
+            {
+              "text": "para",
+              "startFrame": 661,
+              "endFrame": 700
+            },
+            {
+              "text": "ajudar",
+              "startFrame": 700,
+              "endFrame": 707
+            }
+          ]
         },
         {
           "startFrame": 707,
           "endFrame": 743,
-          "text": "a conduzir o encontro de"
+          "text": "a conduzir o encontro de",
+          "words": [
+            {
+              "text": "a",
+              "startFrame": 707,
+              "endFrame": 713
+            },
+            {
+              "text": "conduzir",
+              "startFrame": 713,
+              "endFrame": 725
+            },
+            {
+              "text": "o",
+              "startFrame": 725,
+              "endFrame": 728
+            },
+            {
+              "text": "encontro",
+              "startFrame": 728,
+              "endFrame": 738
+            },
+            {
+              "text": "de",
+              "startFrame": 738,
+              "endFrame": 743
+            }
+          ]
         },
         {
           "startFrame": 743,
           "endFrame": 817,
-          "text": "dermatologistas que trata psoríase com"
+          "text": "dermatologistas que trata psoríase com",
+          "words": [
+            {
+              "text": "dermatologistas",
+              "startFrame": 743,
+              "endFrame": 763
+            },
+            {
+              "text": "que",
+              "startFrame": 763,
+              "endFrame": 770
+            },
+            {
+              "text": "trata",
+              "startFrame": 770,
+              "endFrame": 778
+            },
+            {
+              "text": "psoríase",
+              "startFrame": 778,
+              "endFrame": 805
+            },
+            {
+              "text": "com",
+              "startFrame": 805,
+              "endFrame": 817
+            }
+          ]
         },
         {
           "startFrame": 817,
           "endFrame": 843,
-          "text": "biológicos"
+          "text": "biológicos",
+          "words": [
+            {
+              "text": "biológicos",
+              "startFrame": 817,
+              "endFrame": 843
+            }
+          ]
         }
       ]
     },
@@ -288,7 +659,24 @@
         {
           "startFrame": 849,
           "endFrame": 894,
-          "text": "discutindo casos reais"
+          "text": "discutindo casos reais",
+          "words": [
+            {
+              "text": "discutindo",
+              "startFrame": 849,
+              "endFrame": 871
+            },
+            {
+              "text": "casos",
+              "startFrame": 871,
+              "endFrame": 880
+            },
+            {
+              "text": "reais",
+              "startFrame": 880,
+              "endFrame": 894
+            }
+          ]
         }
       ]
     },
@@ -305,7 +693,19 @@
         {
           "startFrame": 900,
           "endFrame": 917,
-          "text": "na segunda"
+          "text": "na segunda",
+          "words": [
+            {
+              "text": "na",
+              "startFrame": 900,
+              "endFrame": 907
+            },
+            {
+              "text": "segunda",
+              "startFrame": 907,
+              "endFrame": 917
+            }
+          ]
         }
       ]
     },
@@ -322,12 +722,46 @@
         {
           "startFrame": 923,
           "endFrame": 951,
-          "text": "vou participar de um board"
+          "text": "vou participar de um board",
+          "words": [
+            {
+              "text": "vou",
+              "startFrame": 923,
+              "endFrame": 924
+            },
+            {
+              "text": "participar",
+              "startFrame": 924,
+              "endFrame": 933
+            },
+            {
+              "text": "de",
+              "startFrame": 933,
+              "endFrame": 943
+            },
+            {
+              "text": "um",
+              "startFrame": 943,
+              "endFrame": 946
+            },
+            {
+              "text": "board",
+              "startFrame": 946,
+              "endFrame": 951
+            }
+          ]
         },
         {
           "startFrame": 951,
           "endFrame": 972,
-          "text": "internacional"
+          "text": "internacional",
+          "words": [
+            {
+              "text": "internacional",
+              "startFrame": 951,
+              "endFrame": 972
+            }
+          ]
         }
       ]
     },
@@ -344,22 +778,110 @@
         {
           "startFrame": 978,
           "endFrame": 1028,
-          "text": "médicos de vários países na"
+          "text": "médicos de vários países na",
+          "words": [
+            {
+              "text": "médicos",
+              "startFrame": 978,
+              "endFrame": 998
+            },
+            {
+              "text": "de",
+              "startFrame": 998,
+              "endFrame": 1002
+            },
+            {
+              "text": "vários",
+              "startFrame": 1002,
+              "endFrame": 1009
+            },
+            {
+              "text": "países",
+              "startFrame": 1009,
+              "endFrame": 1021
+            },
+            {
+              "text": "na",
+              "startFrame": 1021,
+              "endFrame": 1028
+            }
+          ]
         },
         {
           "startFrame": 1028,
           "endFrame": 1126,
-          "text": "mesma mesa discutindo como é"
+          "text": "mesma mesa discutindo como é",
+          "words": [
+            {
+              "text": "mesma",
+              "startFrame": 1028,
+              "endFrame": 1032
+            },
+            {
+              "text": "mesa",
+              "startFrame": 1032,
+              "endFrame": 1040
+            },
+            {
+              "text": "discutindo",
+              "startFrame": 1040,
+              "endFrame": 1077
+            },
+            {
+              "text": "como",
+              "startFrame": 1077,
+              "endFrame": 1117
+            },
+            {
+              "text": "é",
+              "startFrame": 1117,
+              "endFrame": 1126
+            }
+          ]
         },
         {
           "startFrame": 1126,
           "endFrame": 1172,
-          "text": "tratar de psoríase na vida"
+          "text": "tratar de psoríase na vida",
+          "words": [
+            {
+              "text": "tratar",
+              "startFrame": 1126,
+              "endFrame": 1141
+            },
+            {
+              "text": "de",
+              "startFrame": 1141,
+              "endFrame": 1151
+            },
+            {
+              "text": "psoríase",
+              "startFrame": 1151,
+              "endFrame": 1162
+            },
+            {
+              "text": "na",
+              "startFrame": 1162,
+              "endFrame": 1166
+            },
+            {
+              "text": "vida",
+              "startFrame": 1166,
+              "endFrame": 1172
+            }
+          ]
         },
         {
           "startFrame": 1172,
           "endFrame": 1181,
-          "text": "real"
+          "text": "real",
+          "words": [
+            {
+              "text": "real",
+              "startFrame": 1172,
+              "endFrame": 1181
+            }
+          ]
         }
       ]
     },
@@ -376,22 +898,115 @@
         {
           "startFrame": 1187,
           "endFrame": 1234,
-          "text": "eu levo a realidade do"
+          "text": "eu levo a realidade do",
+          "words": [
+            {
+              "text": "eu",
+              "startFrame": 1187,
+              "endFrame": 1207
+            },
+            {
+              "text": "levo",
+              "startFrame": 1207,
+              "endFrame": 1217
+            },
+            {
+              "text": "a",
+              "startFrame": 1217,
+              "endFrame": 1219
+            },
+            {
+              "text": "realidade",
+              "startFrame": 1219,
+              "endFrame": 1228
+            },
+            {
+              "text": "do",
+              "startFrame": 1228,
+              "endFrame": 1234
+            }
+          ]
         },
         {
           "startFrame": 1234,
           "endFrame": 1324,
-          "text": "paciente brasileiro porque tratamento de"
+          "text": "paciente brasileiro porque tratamento de",
+          "words": [
+            {
+              "text": "paciente",
+              "startFrame": 1234,
+              "endFrame": 1246
+            },
+            {
+              "text": "brasileiro",
+              "startFrame": 1246,
+              "endFrame": 1265
+            },
+            {
+              "text": "porque",
+              "startFrame": 1265,
+              "endFrame": 1306
+            },
+            {
+              "text": "tratamento",
+              "startFrame": 1306,
+              "endFrame": 1317
+            },
+            {
+              "text": "de",
+              "startFrame": 1317,
+              "endFrame": 1324
+            }
+          ]
         },
         {
           "startFrame": 1324,
           "endFrame": 1366,
-          "text": "ponta não pode ficar só"
+          "text": "ponta não pode ficar só",
+          "words": [
+            {
+              "text": "ponta",
+              "startFrame": 1324,
+              "endFrame": 1334
+            },
+            {
+              "text": "não",
+              "startFrame": 1334,
+              "endFrame": 1338
+            },
+            {
+              "text": "pode",
+              "startFrame": 1338,
+              "endFrame": 1345
+            },
+            {
+              "text": "ficar",
+              "startFrame": 1345,
+              "endFrame": 1356
+            },
+            {
+              "text": "só",
+              "startFrame": 1356,
+              "endFrame": 1366
+            }
+          ]
         },
         {
           "startFrame": 1366,
           "endFrame": 1385,
-          "text": "no congresso"
+          "text": "no congresso",
+          "words": [
+            {
+              "text": "no",
+              "startFrame": 1366,
+              "endFrame": 1370
+            },
+            {
+              "text": "congresso",
+              "startFrame": 1370,
+              "endFrame": 1385
+            }
+          ]
         }
       ]
     },
@@ -408,7 +1023,34 @@
         {
           "startFrame": 1391,
           "endFrame": 1439,
-          "text": "tem que chegar no consultório"
+          "text": "tem que chegar no consultório",
+          "words": [
+            {
+              "text": "tem",
+              "startFrame": 1391,
+              "endFrame": 1406
+            },
+            {
+              "text": "que",
+              "startFrame": 1406,
+              "endFrame": 1411
+            },
+            {
+              "text": "chegar",
+              "startFrame": 1411,
+              "endFrame": 1416
+            },
+            {
+              "text": "no",
+              "startFrame": 1416,
+              "endFrame": 1420
+            },
+            {
+              "text": "consultório",
+              "startFrame": 1420,
+              "endFrame": 1439
+            }
+          ]
         }
       ]
     },
@@ -425,12 +1067,46 @@
         {
           "startFrame": 1445,
           "endFrame": 1492,
-          "text": "cabe tudo nessa mochila"
+          "text": "cabe tudo nessa mochila",
+          "words": [
+            {
+              "text": "cabe tudo",
+              "startFrame": 1445,
+              "endFrame": 1474
+            },
+            {
+              "text": "nessa",
+              "startFrame": 1474,
+              "endFrame": 1480
+            },
+            {
+              "text": "mochila",
+              "startFrame": 1480,
+              "endFrame": 1492
+            }
+          ]
         },
         {
           "startFrame": 1502,
           "endFrame": 1529,
-          "text": "menos o casaco"
+          "text": "menos o casaco",
+          "words": [
+            {
+              "text": "menos",
+              "startFrame": 1502,
+              "endFrame": 1513
+            },
+            {
+              "text": "o",
+              "startFrame": 1513,
+              "endFrame": 1519
+            },
+            {
+              "text": "casaco",
+              "startFrame": 1519,
+              "endFrame": 1529
+            }
+          ]
         }
       ]
     },
@@ -447,12 +1123,61 @@
         {
           "startFrame": 1535,
           "endFrame": 1588,
-          "text": "fiquem ligados porque vou mostrar"
+          "text": "fiquem ligados porque vou mostrar",
+          "words": [
+            {
+              "text": "fiquem",
+              "startFrame": 1535,
+              "endFrame": 1555
+            },
+            {
+              "text": "ligados",
+              "startFrame": 1555,
+              "endFrame": 1567
+            },
+            {
+              "text": "porque",
+              "startFrame": 1567,
+              "endFrame": 1574
+            },
+            {
+              "text": "vou",
+              "startFrame": 1574,
+              "endFrame": 1580
+            },
+            {
+              "text": "mostrar",
+              "startFrame": 1580,
+              "endFrame": 1588
+            }
+          ]
         },
         {
           "startFrame": 1588,
           "endFrame": 1618,
-          "text": "os bastidores por aqui"
+          "text": "os bastidores por aqui",
+          "words": [
+            {
+              "text": "os",
+              "startFrame": 1588,
+              "endFrame": 1592
+            },
+            {
+              "text": "bastidores",
+              "startFrame": 1592,
+              "endFrame": 1602
+            },
+            {
+              "text": "por",
+              "startFrame": 1602,
+              "endFrame": 1610
+            },
+            {
+              "text": "aqui",
+              "startFrame": 1610,
+              "endFrame": 1618
+            }
+          ]
         }
       ]
     },
@@ -469,7 +1194,34 @@
         {
           "startFrame": 1624,
           "endFrame": 1671,
-          "text": "ah, e a outra notícia"
+          "text": "ah, e a outra notícia",
+          "words": [
+            {
+              "text": "ah",
+              "startFrame": 1624,
+              "endFrame": 1642
+            },
+            {
+              "text": "e",
+              "startFrame": 1645,
+              "endFrame": 1646
+            },
+            {
+              "text": "a",
+              "startFrame": 1646,
+              "endFrame": 1648
+            },
+            {
+              "text": "outra",
+              "startFrame": 1648,
+              "endFrame": 1654
+            },
+            {
+              "text": "notícia",
+              "startFrame": 1654,
+              "endFrame": 1671
+            }
+          ]
         }
       ]
     },
@@ -486,12 +1238,46 @@
         {
           "startFrame": 1677,
           "endFrame": 1709,
-          "text": "essa também não cabe na"
+          "text": "essa também não cabe na",
+          "words": [
+            {
+              "text": "essa",
+              "startFrame": 1677,
+              "endFrame": 1690
+            },
+            {
+              "text": "também",
+              "startFrame": 1690,
+              "endFrame": 1697
+            },
+            {
+              "text": "não",
+              "startFrame": 1697,
+              "endFrame": 1700
+            },
+            {
+              "text": "cabe",
+              "startFrame": 1700,
+              "endFrame": 1705
+            },
+            {
+              "text": "na",
+              "startFrame": 1705,
+              "endFrame": 1709
+            }
+          ]
         },
         {
           "startFrame": 1709,
           "endFrame": 1720,
-          "text": "mochila"
+          "text": "mochila",
+          "words": [
+            {
+              "text": "mochila",
+              "startFrame": 1709,
+              "endFrame": 1720
+            }
+          ]
         }
       ]
     },
@@ -508,29 +1294,95 @@
         {
           "startFrame": 1726,
           "endFrame": 1755,
-          "text": "fica para a próxima"
+          "text": "fica para a próxima",
+          "words": [
+            {
+              "text": "fica",
+              "startFrame": 1726,
+              "endFrame": 1739
+            },
+            {
+              "text": "para",
+              "startFrame": 1739,
+              "endFrame": 1745
+            },
+            {
+              "text": "a",
+              "startFrame": 1745,
+              "endFrame": 1748
+            },
+            {
+              "text": "próxima",
+              "startFrame": 1748,
+              "endFrame": 1755
+            }
+          ]
         }
       ]
     },
     {
       "index": 24,
       "sourceStart": 83.66,
-      "sourceEnd": 85.36,
+      "sourceEnd": 88.3,
       "editedStart": 58.6,
-      "editedEnd": 60.3,
-      "durationFrames": 51,
+      "editedEnd": 63.24,
+      "durationFrames": 139,
       "trimBeforeFrames": 2510,
       "text": "Agora deixa eu ir, que estão chamando meu voo.",
       "captions": [
         {
           "startFrame": 1761,
           "endFrame": 1781,
-          "text": "agora deixa eu ir"
+          "text": "agora deixa eu ir",
+          "words": [
+            {
+              "text": "agora",
+              "startFrame": 1761,
+              "endFrame": 1769
+            },
+            {
+              "text": "deixa",
+              "startFrame": 1769,
+              "endFrame": 1778
+            },
+            {
+              "text": "eu ir",
+              "startFrame": 1778,
+              "endFrame": 1781
+            }
+          ]
         },
         {
           "startFrame": 1781,
           "endFrame": 1806,
-          "text": "que estão chamando meu voo"
+          "text": "que estão chamando meu voo",
+          "words": [
+            {
+              "text": "que",
+              "startFrame": 1781,
+              "endFrame": 1785
+            },
+            {
+              "text": "estão",
+              "startFrame": 1785,
+              "endFrame": 1787
+            },
+            {
+              "text": "chamando",
+              "startFrame": 1787,
+              "endFrame": 1795
+            },
+            {
+              "text": "meu",
+              "startFrame": 1795,
+              "endFrame": 1800
+            },
+            {
+              "text": "voo",
+              "startFrame": 1800,
+              "endFrame": 1806
+            }
+          ]
         }
       ]
     }

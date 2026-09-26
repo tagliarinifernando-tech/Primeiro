@@ -3,7 +3,7 @@ import {Composition} from 'remotion';
 import {Main} from './Main';
 import {editData, TOTAL_WITH_END_CARD} from './data';
 import {Main2} from './Main2';
-import {editData2, TOTAL_WITH_END_CARD_2} from './data2';
+import {editData2} from './data2';
 
 export const RemotionRoot: React.FC = () => {
 	return (
@@ -19,7 +19,7 @@ export const RemotionRoot: React.FC = () => {
 			<Composition
 				id="Reels2"
 				component={Main2}
-				durationInFrames={TOTAL_WITH_END_CARD_2}
+				durationInFrames={editData2.totalFrames}
 				fps={editData2.fps}
 				width={editData2.width}
 				height={editData2.height}

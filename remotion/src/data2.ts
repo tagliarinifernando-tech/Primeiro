@@ -1,5 +1,5 @@
 import raw from './data2.json';
-import type {Caption, KeywordEvent, SfxEvent, Segment} from './data';
+import type {Caption, CaptionWord, KeywordEvent, SfxEvent, Segment} from './data';
 
 export interface EditData2 {
 	fps: number;
@@ -20,4 +20,4 @@ export const editData2 = raw as EditData2;
 export const END_CARD_FRAMES_2 = 110;
 export const TOTAL_WITH_END_CARD_2 = editData2.totalFrames + END_CARD_FRAMES_2;
 
-export type {Caption};
+export type {Caption, CaptionWord};

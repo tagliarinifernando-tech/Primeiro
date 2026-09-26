@@ -1,9 +1,16 @@
 import raw from './data.json';
 
+export interface CaptionWord {
+	text: string;
+	startFrame: number;
+	endFrame: number;
+}
+
 export interface Caption {
 	startFrame: number;
 	endFrame: number;
 	text: string;
+	words?: CaptionWord[];
 }
 
 export interface Segment {

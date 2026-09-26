@@ -8,16 +8,33 @@ import {
 	useCurrentFrame,
 } from 'remotion';
 import {Video} from '@remotion/media';
-import {editData2, TOTAL_WITH_END_CARD_2} from './data2';
+import {editData2} from './data2';
 import {getSegmentTransform} from './segmentTransform';
 import {getCropTransform, sourceWidth, sourceHeight} from './cropTransform';
 import {CaptionOverlay} from './components/CaptionOverlay';
 import {KeywordStack} from './components/KeywordStack';
 import {MotionGraphicsBeforeAfter} from './components/MotionGraphicsBeforeAfter';
 import {MotionGraphicsMissions} from './components/MotionGraphicsMissions';
-import {EndCard} from './components/EndCard';
+import {theme} from './theme';
 
 const allCaptions = editData2.segments.flatMap((s) => s.captions);
+
+// J-cut: delay every internal video cut by a few frames relative to its
+// matching audio/caption cut, so the next line is already heard while the
+// previous shot lingers. The very first and last edges stay unshifted.
+const JCUT_FRAMES = 3;
+const segmentCount = editData2.segments.length;
+
+const getJCutWindow = (segment: (typeof editData2.segments)[number]) => {
+	const i = segment.index;
+	const fromFrame =
+		Math.round(segment.editedStart * editData2.fps) + (i > 0 ? JCUT_FRAMES : 0);
+	const toFrame =
+		Math.round(segment.editedEnd * editData2.fps) + (i < segmentCount - 1 ? JCUT_FRAMES : 0);
+	const durationInFrames = toFrame - fromFrame;
+	const trimBefore = segment.trimBeforeFrames + (i > 0 ? JCUT_FRAMES : 0);
+	return {fromFrame, durationInFrames, trimBefore};
+};
 
 export const Main2: React.FC = () => {
 	const frame = useCurrentFrame();
@@ -28,7 +45,7 @@ export const Main2: React.FC = () => {
 
 	const fadeOutOpacity = interpolate(
 		frame,
-		[TOTAL_WITH_END_CARD_2 - 15, TOTAL_WITH_END_CARD_2],
+		[editData2.totalFrames - 15, editData2.totalFrames],
 		[0, 1],
 		{extrapolateLeft: 'clamp', extrapolateRight: 'clamp'},
 	);
@@ -37,13 +54,15 @@ export const Main2: React.FC = () => {
 		<AbsoluteFill style={{backgroundColor: '#000000'}}>
 			{editData2.segments.map((segment) => {
 				const isEmphasis = editData2.zoomEmphasisIndices.includes(segment.index);
+				const {fromFrame, durationInFrames, trimBefore} = getJCutWindow(segment);
 				return (
-					<Sequence
-						key={segment.index}
-						from={Math.round(segment.editedStart * editData2.fps)}
-						durationInFrames={segment.durationFrames}
-					>
-						<SegmentVideo2 segment={segment} isEmphasis={isEmphasis} />
+					<Sequence key={segment.index} from={fromFrame} durationInFrames={durationInFrames}>
+						<SegmentVideo2
+							segment={segment}
+							isEmphasis={isEmphasis}
+							trimBefore={trimBefore}
+							durationInFrames={durationInFrames}
+						/>
 					</Sequence>
 				);
 			})}
@@ -62,7 +81,16 @@ export const Main2: React.FC = () => {
 				<MotionGraphicsMissionsInner />
 			</Sequence>
 
-			{!inMg1 && !inMg2 && <CaptionOverlay captions={allCaptions} frame={frame} />}
+			{!inMg1 && !inMg2 && (
+				<CaptionOverlay
+					captions={allCaptions}
+					frame={frame}
+					fontFamily={theme.dynamicFontFamily}
+					fontWeight={400}
+					fontSize={46}
+					uppercase
+				/>
+			)}
 			<KeywordStack events={editData2.keywordEvents} frame={frame} />
 
 			<Audio src={staticFile('audio/voice2.wav')} />
@@ -73,13 +101,6 @@ export const Main2: React.FC = () => {
 				</Sequence>
 			))}
 
-			<Sequence
-				from={editData2.totalFrames}
-				durationInFrames={TOTAL_WITH_END_CARD_2 - editData2.totalFrames}
-			>
-				<EndCardInner />
-			</Sequence>
-
 			<AbsoluteFill style={{backgroundColor: '#000000', opacity: fadeOutOpacity}} />
 		</AbsoluteFill>
 	);
@@ -88,7 +109,9 @@ export const Main2: React.FC = () => {
 const SegmentVideo2: React.FC<{
 	segment: (typeof editData2.segments)[number];
 	isEmphasis: boolean;
-}> = ({segment, isEmphasis}) => {
+	trimBefore: number;
+	durationInFrames: number;
+}> = ({segment, isEmphasis, trimBefore, durationInFrames}) => {
 	const frame = useCurrentFrame();
 	const {scale, translateXPercent} = getSegmentTransform(segment, frame, isEmphasis);
 	const {translateX, translateY, totalScale} = getCropTransform(scale, translateXPercent);
@@ -97,8 +120,8 @@ const SegmentVideo2: React.FC<{
 		<AbsoluteFill style={{overflow: 'hidden'}}>
 			<Video
 				src={staticFile('CRU2.mov')}
-				trimBefore={segment.trimBeforeFrames}
-				trimAfter={segment.trimBeforeFrames + segment.durationFrames}
+				trimBefore={trimBefore}
+				trimAfter={trimBefore + durationInFrames}
 				muted
 				style={{
 					position: 'absolute',
@@ -123,9 +146,4 @@ const MotionGraphicsBeforeAfterInner: React.FC = () => {
 const MotionGraphicsMissionsInner: React.FC = () => {
 	const frame = useCurrentFrame();
 	return <MotionGraphicsMissions localFrame={frame} />;
-};
-
-const EndCardInner: React.FC = () => {
-	const frame = useCurrentFrame();
-	return <EndCard localFrame={frame} />;
 };

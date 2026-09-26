@@ -7,6 +7,7 @@ const LATIN_EXT_RANGE =
 	'U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF';
 
 const fontFamily = 'Montserrat';
+const dynamicFontFamily = 'Anton';
 
 for (const weight of ['500', '700', '900']) {
 	loadFont({
@@ -23,8 +24,22 @@ for (const weight of ['500', '700', '900']) {
 	});
 }
 
+loadFont({
+	family: dynamicFontFamily,
+	url: staticFile('fonts/anton-latin-400-normal.woff2'),
+	weight: '400',
+	unicodeRange: LATIN_RANGE,
+});
+loadFont({
+	family: dynamicFontFamily,
+	url: staticFile('fonts/anton-latin-ext-400-normal.woff2'),
+	weight: '400',
+	unicodeRange: LATIN_EXT_RANGE,
+});
+
 export const theme = {
 	fontFamily,
+	dynamicFontFamily,
 	captionColor: '#FFFFFF',
 	captionSize: 40,
 	accentColor: '#FFFFFF',
