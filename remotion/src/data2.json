@@ -418,59 +418,20 @@
       "editedEnd": 17.72,
       "durationFrames": 72,
       "trimBeforeFrames": 677,
-      "text": "Dessa vez, eu não vou assistir palestra.",
+      "text": "Desta vez não vou só para assistir palestra.",
       "captions": [
         {
           "startFrame": 463,
-          "endFrame": 488,
-          "text": "dessa vez",
+          "endFrame": 529,
+          "text": "desta vez não vou só para assistir palestra",
           "words": [
             {
-              "text": "dessa",
+              "text": "desta vez não vou só para assistir palestra",
               "startFrame": 463,
-              "endFrame": 481
-            },
-            {
-              "text": "vez",
-              "startFrame": 481,
-              "endFrame": 488
+              "endFrame": 529
             }
           ],
           "topPercent": 75
-        },
-        {
-          "startFrame": 491,
-          "endFrame": 529,
-          "text": "eu não vou assistir palestra",
-          "words": [
-            {
-              "text": "eu",
-              "startFrame": 491,
-              "endFrame": 493
-            },
-            {
-              "text": "não",
-              "startFrame": 493,
-              "endFrame": 497
-            },
-            {
-              "text": "vou",
-              "startFrame": 497,
-              "endFrame": 502
-            },
-            {
-              "text": "assistir",
-              "startFrame": 502,
-              "endFrame": 513
-            },
-            {
-              "text": "palestra",
-              "startFrame": 513,
-              "endFrame": 529,
-              "emphasis": true
-            }
-          ],
-          "topPercent": 92
         }
       ]
     },
