@@ -10,6 +10,7 @@ interface CaptionStyleProps {
 	color?: string;
 	uppercase?: boolean;
 	topPercent?: number;
+	align?: 'center' | 'left';
 }
 
 const AnimatedWord: React.FC<{
@@ -59,6 +60,7 @@ export const CaptionOverlay: React.FC<{captions: Caption[]; frame: number} & Cap
 	color,
 	uppercase,
 	topPercent,
+	align = 'center',
 }) => {
 	const active = captions.find((c) => frame >= c.startFrame && frame < c.endFrame);
 	if (!active) return null;
@@ -90,6 +92,8 @@ export const CaptionOverlay: React.FC<{captions: Caption[]; frame: number} & Cap
 		if (current.length) lineGroups.push(current);
 	}
 
+	const justify = align === 'left' ? 'flex-start' : 'center';
+
 	return (
 		<div
 			style={{
@@ -98,7 +102,7 @@ export const CaptionOverlay: React.FC<{captions: Caption[]; frame: number} & Cap
 				left: 0,
 				right: 0,
 				display: 'flex',
-				justifyContent: 'center',
+				justifyContent: justify,
 				padding: '0 60px',
 				opacity: hasWords ? 1 : opacity,
 			}}
@@ -109,19 +113,19 @@ export const CaptionOverlay: React.FC<{captions: Caption[]; frame: number} & Cap
 					fontWeight: fontWeight ?? 500,
 					fontSize: resolvedFontSize,
 					color: color ?? theme.captionColor,
-					textAlign: 'center',
+					textAlign: align,
 					lineHeight: 1.3,
 					textShadow: '0 2px 8px rgba(0,0,0,0.7)',
 					letterSpacing: uppercase ? 1 : undefined,
 					display: hasWords ? 'flex' : undefined,
 					flexDirection: hasWords ? 'column' : undefined,
-					alignItems: hasWords ? 'center' : undefined,
+					alignItems: hasWords ? justify : undefined,
 					gap: hasWords ? '0.1em' : undefined,
 				}}
 			>
 				{hasWords
 					? lineGroups.map((line, li) => (
-							<div key={li} style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center'}}>
+							<div key={li} style={{display: 'flex', flexWrap: 'wrap', justifyContent: justify}}>
 								{line.map((w, i) => (
 									<AnimatedWord
 										key={i}
