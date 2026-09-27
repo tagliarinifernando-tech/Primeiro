@@ -103,25 +103,21 @@ theme's accent/glow color) or a slightly larger size on the emphasized word alon
 reinforces the same point but isn't required — the font swap by itself already
 does most of the work.
 
-One font-pairing that reads as polished/editorial rather than "just bolder":
-an elegant cursive/script serif for the emphasized word against a clean,
-plain sans-serif for the rest of the phrase (as opposed to pairing the base
-font with a heavier weight of itself, or with the same condensed display font
-used for full-word `KeywordStack` call-outs — those read more like a headline
-stamp than an in-line accent). When you use a script/cursive pairing like
-this, let the emphasized word also run noticeably larger than its neighbors
-(not just a different font/color at the same size) — a script word at 1.5–2x
-the surrounding sans text, slightly overlapping the line above or below,
-reads like a hand-picked magazine pull-quote; the same word at matching size
-just reads like a font swap. This works well combined with a title/keyword
-card that itself mixes a bold numeral or word with a script word right next
-to it (e.g. a big serif "3" beside a script "ajustes") — the contrast is the
-technique, in the hook title as much as in the running captions. A script font
-loads the same way as the other two (see `environment-workarounds.md`'s Fonts
-section) — add it to `theme.ts` as a third `loadFont()` call and a third
-family name (e.g. `theme.scriptFontFamily`) rather than hard-coding a font
-string at the call site, so a later video can reuse or opt out of it the same
-way it already does for `fontFamily`/`dynamicFontFamily`.
+Default to the bold condensed display font (`theme.dynamicFontFamily`) for
+this, sized ~1.3–1.4x the base caption text — that alone reads as a clear,
+confident accent without needing a second creative decision. There's also an
+elegant cursive/script serif pairing (script word against plain sans base,
+run 1.5–2x larger, like a magazine pull-quote) that can look striking in a
+mockup — but treat it as an alternative to *propose and confirm* with the
+specific creator before building a whole video around it, not a safe default:
+it's a much bigger stylistic swing than a bold/condensed accent, and reads as
+too decorative/precious to some presenters even when the isolated example
+looks polished. If you do add a script font, load it the same way as the
+other two (see `environment-workarounds.md`'s Fonts section) as a third
+`theme.ts` family (e.g. `theme.scriptFontFamily`) so it's easy to add or fully
+remove without touching anything else — and if the creator pushes back on it,
+that's a "no" on the whole cursive direction, not a cue to tune size/color
+and try again with the same font.
 
 Pick emphasis words the same way you already pick
 `KeywordStack` keywords (the thesis word, a number, a proper noun, a strong

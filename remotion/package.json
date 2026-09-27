@@ -9,7 +9,6 @@
   "dependencies": {
     "@fontsource/anton": "^5.3.0",
     "@fontsource/montserrat": "^5.3.0",
-    "@fontsource/sacramento": "^5.3.0",
     "@remotion/cli": "4.0.526",
     "@remotion/fonts": "^4.0.526",
     "@remotion/media": "4.0.526",
