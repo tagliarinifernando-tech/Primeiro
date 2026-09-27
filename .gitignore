@@ -8,3 +8,8 @@ remotion/public/CRU2.mov
 remotion/public/audio/
 remotion/frame*.png
 remotion/kf_*.png
+
+# vox-animation: vídeos gerados (clipes, narração, corte final)
+projects/*/clips/
+projects/*/voice/
+projects/*/final.mp4
