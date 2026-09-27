@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "@fontsource/anton": "^5.3.0",
-    "@fontsource/birthstone": "^5.3.0",
+    "@fontsource/instrument-serif": "^5.3.0",
     "@fontsource/montserrat": "^5.3.0",
     "@remotion/cli": "4.0.526",
     "@remotion/fonts": "^4.0.526",

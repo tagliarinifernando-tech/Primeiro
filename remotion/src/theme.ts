@@ -8,7 +8,7 @@ const LATIN_EXT_RANGE =
 
 const fontFamily = 'Montserrat';
 const dynamicFontFamily = 'Anton';
-const scriptFontFamily = 'Birthstone';
+const scriptFontFamily = 'Instrument Serif';
 
 for (const weight of ['500', '700', '900']) {
 	loadFont({
@@ -40,14 +40,16 @@ loadFont({
 
 loadFont({
 	family: scriptFontFamily,
-	url: staticFile('fonts/birthstone-latin-400-normal.woff2'),
+	url: staticFile('fonts/instrument-serif-latin-400-italic.woff2'),
 	weight: '400',
+	style: 'italic',
 	unicodeRange: LATIN_RANGE,
 });
 loadFont({
 	family: scriptFontFamily,
-	url: staticFile('fonts/birthstone-latin-ext-400-normal.woff2'),
+	url: staticFile('fonts/instrument-serif-latin-ext-400-italic.woff2'),
 	weight: '400',
+	style: 'italic',
 	unicodeRange: LATIN_EXT_RANGE,
 });
 
