@@ -93,12 +93,19 @@ export const CaptionOverlay: React.FC<{captions: Caption[]; frame: number} & Cap
 	}
 
 	const justify = align === 'left' ? 'flex-start' : 'center';
+	const resolvedTopPercent = active.topPercent ?? topPercent ?? 55;
+	// Anchor by the BOTTOM of a single base-size line at topPercent, not the
+	// top: a caption with no emphasis line renders identically to before, but
+	// one with an oversized emphasis line (which can add 100+px of extra
+	// height) grows upward from that fixed bottom instead of downward past
+	// the bottom edge of the frame.
+	const oneLineHeightPx = resolvedFontSize * 1.3;
 
 	return (
 		<div
 			style={{
 				position: 'absolute',
-				top: `${active.topPercent ?? topPercent ?? 55}%`,
+				bottom: `calc(${100 - resolvedTopPercent}% - ${oneLineHeightPx}px)`,
 				left: 0,
 				right: 0,
 				display: 'flex',
