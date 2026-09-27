@@ -109,18 +109,22 @@ word — it's a small layout change plus a font choice, together:
   before it collides with its neighbors, but an isolated word on its own line
   can run genuinely large.
 - **Go bigger than feels safe at first** — validated up to ~3x the base
-  caption size once the word has its own line and a generous gap (`0.25–0.3em`
-  or more) above and below it to breathe. A same-size or 1.3–1.5x emphasis
-  reads as timid once you've seen the isolated-line version; there isn't much
-  of a ceiling as long as the word still fits within the frame width at your
-  chosen font.
-- **Consider left-margin alignment instead of centered** for the whole caption
-  block (an `align: 'center' | 'left'` prop on the container, default
-  `'center'` to preserve older compositions) — a left-anchored block with a
-  big emphasized word breaking onto its own line at that same margin is a
-  recognizable, screenshot-able Reels/TikTok caption style (a numeral or short
-  hook phrase up top, a big accent word, a short line closing it out), more
-  editorial-magazine than centered subtitle-style captions.
+  caption size once the word has its own line. A same-size or 1.3–1.5x
+  emphasis reads as timid once you've seen the isolated-line version; there
+  isn't much of a ceiling as long as the word still fits within the frame
+  width at your chosen font. Keep the gap between the lines tight though
+  (well under `0.1em`) — a generous gap (tried at `0.25–0.3em`) reads as the
+  lines drifting apart rather than one cohesive caption block, and got
+  reverted in real feedback.
+- **Keep the caption block centered.** A left-margin-aligned block (an
+  `align: 'center' | 'left'` prop exists on the container for this, default
+  `'center'`) was tried because it's a recognizable, screenshot-able look on
+  some Reels/TikTok accounts — but it read as *wrong* in real feedback for
+  this presenter/style, specifically called out as looking bad. Treat
+  left-alignment the same way as the connected-script font below: a real
+  option that exists in the wild and that you could propose, but not
+  something to default to or reintroduce without being asked again. Centered
+  is the validated default even with a large line-broken emphasis word.
 
 On font choice, three options exist on a spectrum from safe to bold, and real
 feedback across iterations narrowed which ones actually land:
