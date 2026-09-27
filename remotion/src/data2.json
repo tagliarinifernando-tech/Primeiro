@@ -546,7 +546,7 @@
       "editedEnd": 28.2,
       "durationFrames": 246,
       "trimBeforeFrames": 895,
-      "text": "Na primeira, eu fui convidado para ajudar a conduzir o encontro de dermatologistas que trata psoríase com biológicos,",
+      "text": "Na primeira, eu fui convidado para ajudar a conduzir o encontro de dermatologistas que tratam psoríase com biológicos,",
       "captions": [
         {
           "startFrame": 603,
@@ -635,7 +635,7 @@
         {
           "startFrame": 743,
           "endFrame": 817,
-          "text": "dermatologistas que trata psoríase com",
+          "text": "dermatologistas que tratam psoríase com",
           "words": [
             {
               "text": "dermatologistas",
@@ -648,7 +648,7 @@
               "endFrame": 770
             },
             {
-              "text": "trata",
+              "text": "tratam",
               "startFrame": 770,
               "endFrame": 778
             },
