@@ -32,9 +32,11 @@
             {
               "text": "notícias",
               "startFrame": 43,
-              "endFrame": 56
+              "endFrame": 56,
+              "emphasis": true
             }
-          ]
+          ],
+          "topPercent": 72
         },
         {
           "startFrame": 68,
@@ -59,9 +61,11 @@
             {
               "text": "mochila",
               "startFrame": 85,
-              "endFrame": 97
+              "endFrame": 97,
+              "emphasis": true
             }
-          ]
+          ],
+          "topPercent": 67
         },
         {
           "startFrame": 105,
@@ -83,7 +87,8 @@
               "startFrame": 110,
               "endFrame": 118
             }
-          ]
+          ],
+          "topPercent": 75
         }
       ]
     },
@@ -107,7 +112,8 @@
               "startFrame": 124,
               "endFrame": 182
             }
-          ]
+          ],
+          "topPercent": 72
         }
       ]
     },
@@ -151,7 +157,8 @@
               "startFrame": 215,
               "endFrame": 230
             }
-          ]
+          ],
+          "topPercent": 67
         },
         {
           "startFrame": 230,
@@ -166,9 +173,11 @@
             {
               "text": "europa",
               "startFrame": 238,
-              "endFrame": 248
+              "endFrame": 248,
+              "emphasis": true
             }
-          ]
+          ],
+          "topPercent": 75
         }
       ]
     },
@@ -195,9 +204,11 @@
             {
               "text": "paris",
               "startFrame": 280,
-              "endFrame": 291
+              "endFrame": 291,
+              "emphasis": true
             }
-          ]
+          ],
+          "topPercent": 72
         }
       ]
     },
@@ -224,9 +235,11 @@
             {
               "text": "pijama",
               "startFrame": 299,
-              "endFrame": 310
+              "endFrame": 310,
+              "emphasis": true
             }
-          ]
+          ],
+          "topPercent": 67
         }
       ]
     },
@@ -255,7 +268,8 @@
               "startFrame": 326,
               "endFrame": 334
             }
-          ]
+          ],
+          "topPercent": 75
         }
       ]
     },
@@ -282,9 +296,11 @@
             {
               "text": "ano",
               "startFrame": 350,
-              "endFrame": 355
+              "endFrame": 355,
+              "emphasis": true
             }
-          ]
+          ],
+          "topPercent": 72
         },
         {
           "startFrame": 357,
@@ -311,7 +327,8 @@
               "startFrame": 365,
               "endFrame": 378
             }
-          ]
+          ],
+          "topPercent": 67
         }
       ]
     },
@@ -333,9 +350,11 @@
             {
               "text": "passaporte",
               "startFrame": 384,
-              "endFrame": 404
+              "endFrame": 404,
+              "emphasis": true
             }
-          ]
+          ],
+          "topPercent": 75
         }
       ]
     },
@@ -357,9 +376,11 @@
             {
               "text": "viena",
               "startFrame": 410,
-              "endFrame": 431
+              "endFrame": 431,
+              "emphasis": true
             }
-          ]
+          ],
+          "topPercent": 72
         }
       ]
     },
@@ -381,9 +402,11 @@
             {
               "text": "presencial",
               "startFrame": 437,
-              "endFrame": 457
+              "endFrame": 457,
+              "emphasis": true
             }
-          ]
+          ],
+          "topPercent": 67
         }
       ]
     },
@@ -412,7 +435,8 @@
               "startFrame": 481,
               "endFrame": 488
             }
-          ]
+          ],
+          "topPercent": 75
         },
         {
           "startFrame": 491,
@@ -442,9 +466,11 @@
             {
               "text": "palestra",
               "startFrame": 513,
-              "endFrame": 529
+              "endFrame": 529,
+              "emphasis": true
             }
-          ]
+          ],
+          "topPercent": 72
         }
       ]
     },
@@ -483,7 +509,8 @@
               "startFrame": 560,
               "endFrame": 567
             }
-          ]
+          ],
+          "topPercent": 67
         },
         {
           "startFrame": 572,
@@ -503,9 +530,11 @@
             {
               "text": "missões",
               "startFrame": 587,
-              "endFrame": 597
+              "endFrame": 597,
+              "emphasis": true
             }
-          ]
+          ],
+          "topPercent": 75
         }
       ]
     },
@@ -534,7 +563,8 @@
               "startFrame": 619,
               "endFrame": 631
             }
-          ]
+          ],
+          "topPercent": 72
         },
         {
           "startFrame": 638,
@@ -566,7 +596,8 @@
               "startFrame": 700,
               "endFrame": 707
             }
-          ]
+          ],
+          "topPercent": 67
         },
         {
           "startFrame": 707,
@@ -598,7 +629,8 @@
               "startFrame": 738,
               "endFrame": 743
             }
-          ]
+          ],
+          "topPercent": 75
         },
         {
           "startFrame": 743,
@@ -623,14 +655,16 @@
             {
               "text": "psoríase",
               "startFrame": 778,
-              "endFrame": 805
+              "endFrame": 805,
+              "emphasis": true
             },
             {
               "text": "com",
               "startFrame": 805,
               "endFrame": 817
             }
-          ]
+          ],
+          "topPercent": 72
         },
         {
           "startFrame": 817,
@@ -640,9 +674,11 @@
             {
               "text": "biológicos",
               "startFrame": 817,
-              "endFrame": 843
+              "endFrame": 843,
+              "emphasis": true
             }
-          ]
+          ],
+          "topPercent": 67
         }
       ]
     },
@@ -674,9 +710,11 @@
             {
               "text": "reais",
               "startFrame": 880,
-              "endFrame": 894
+              "endFrame": 894,
+              "emphasis": true
             }
-          ]
+          ],
+          "topPercent": 75
         }
       ]
     },
@@ -705,7 +743,8 @@
               "startFrame": 907,
               "endFrame": 917
             }
-          ]
+          ],
+          "topPercent": 72
         }
       ]
     },
@@ -749,7 +788,8 @@
               "startFrame": 946,
               "endFrame": 951
             }
-          ]
+          ],
+          "topPercent": 67
         },
         {
           "startFrame": 951,
@@ -759,9 +799,11 @@
             {
               "text": "internacional",
               "startFrame": 951,
-              "endFrame": 972
+              "endFrame": 972,
+              "emphasis": true
             }
-          ]
+          ],
+          "topPercent": 75
         }
       ]
     },
@@ -805,7 +847,8 @@
               "startFrame": 1021,
               "endFrame": 1028
             }
-          ]
+          ],
+          "topPercent": 72
         },
         {
           "startFrame": 1028,
@@ -837,7 +880,8 @@
               "startFrame": 1117,
               "endFrame": 1126
             }
-          ]
+          ],
+          "topPercent": 67
         },
         {
           "startFrame": 1126,
@@ -857,7 +901,8 @@
             {
               "text": "psoríase",
               "startFrame": 1151,
-              "endFrame": 1162
+              "endFrame": 1162,
+              "emphasis": true
             },
             {
               "text": "na",
@@ -869,7 +914,8 @@
               "startFrame": 1166,
               "endFrame": 1172
             }
-          ]
+          ],
+          "topPercent": 75
         },
         {
           "startFrame": 1172,
@@ -879,9 +925,11 @@
             {
               "text": "real",
               "startFrame": 1172,
-              "endFrame": 1181
+              "endFrame": 1181,
+              "emphasis": true
             }
-          ]
+          ],
+          "topPercent": 72
         }
       ]
     },
@@ -918,14 +966,16 @@
             {
               "text": "realidade",
               "startFrame": 1219,
-              "endFrame": 1228
+              "endFrame": 1228,
+              "emphasis": true
             },
             {
               "text": "do",
               "startFrame": 1228,
               "endFrame": 1234
             }
-          ]
+          ],
+          "topPercent": 67
         },
         {
           "startFrame": 1234,
@@ -940,7 +990,8 @@
             {
               "text": "brasileiro",
               "startFrame": 1246,
-              "endFrame": 1265
+              "endFrame": 1265,
+              "emphasis": true
             },
             {
               "text": "porque",
@@ -957,7 +1008,8 @@
               "startFrame": 1317,
               "endFrame": 1324
             }
-          ]
+          ],
+          "topPercent": 75
         },
         {
           "startFrame": 1324,
@@ -967,7 +1019,8 @@
             {
               "text": "ponta",
               "startFrame": 1324,
-              "endFrame": 1334
+              "endFrame": 1334,
+              "emphasis": true
             },
             {
               "text": "não",
@@ -989,7 +1042,8 @@
               "startFrame": 1356,
               "endFrame": 1366
             }
-          ]
+          ],
+          "topPercent": 72
         },
         {
           "startFrame": 1366,
@@ -1006,7 +1060,8 @@
               "startFrame": 1370,
               "endFrame": 1385
             }
-          ]
+          ],
+          "topPercent": 67
         }
       ]
     },
@@ -1048,9 +1103,11 @@
             {
               "text": "consultório",
               "startFrame": 1420,
-              "endFrame": 1439
+              "endFrame": 1439,
+              "emphasis": true
             }
-          ]
+          ],
+          "topPercent": 75
         }
       ]
     },
@@ -1082,9 +1139,11 @@
             {
               "text": "mochila",
               "startFrame": 1480,
-              "endFrame": 1492
+              "endFrame": 1492,
+              "emphasis": true
             }
-          ]
+          ],
+          "topPercent": 72
         },
         {
           "startFrame": 1502,
@@ -1104,9 +1163,11 @@
             {
               "text": "casaco",
               "startFrame": 1519,
-              "endFrame": 1529
+              "endFrame": 1529,
+              "emphasis": true
             }
-          ]
+          ],
+          "topPercent": 67
         }
       ]
     },
@@ -1150,7 +1211,8 @@
               "startFrame": 1580,
               "endFrame": 1588
             }
-          ]
+          ],
+          "topPercent": 75
         },
         {
           "startFrame": 1588,
@@ -1165,7 +1227,8 @@
             {
               "text": "bastidores",
               "startFrame": 1592,
-              "endFrame": 1602
+              "endFrame": 1602,
+              "emphasis": true
             },
             {
               "text": "por",
@@ -1177,7 +1240,8 @@
               "startFrame": 1610,
               "endFrame": 1618
             }
-          ]
+          ],
+          "topPercent": 72
         }
       ]
     },
@@ -1219,9 +1283,11 @@
             {
               "text": "notícia",
               "startFrame": 1654,
-              "endFrame": 1671
+              "endFrame": 1671,
+              "emphasis": true
             }
-          ]
+          ],
+          "topPercent": 67
         }
       ]
     },
@@ -1265,7 +1331,8 @@
               "startFrame": 1705,
               "endFrame": 1709
             }
-          ]
+          ],
+          "topPercent": 75
         },
         {
           "startFrame": 1709,
@@ -1275,9 +1342,11 @@
             {
               "text": "mochila",
               "startFrame": 1709,
-              "endFrame": 1720
+              "endFrame": 1720,
+              "emphasis": true
             }
-          ]
+          ],
+          "topPercent": 72
         }
       ]
     },
@@ -1314,9 +1383,11 @@
             {
               "text": "próxima",
               "startFrame": 1748,
-              "endFrame": 1755
+              "endFrame": 1755,
+              "emphasis": true
             }
-          ]
+          ],
+          "topPercent": 67
         }
       ]
     },
@@ -1350,7 +1421,8 @@
               "startFrame": 1778,
               "endFrame": 1781
             }
-          ]
+          ],
+          "topPercent": 75
         },
         {
           "startFrame": 1781,
@@ -1380,9 +1452,11 @@
             {
               "text": "voo",
               "startFrame": 1800,
-              "endFrame": 1806
+              "endFrame": 1806,
+              "emphasis": true
             }
-          ]
+          ],
+          "topPercent": 72
         }
       ]
     }
@@ -1404,6 +1478,18 @@
       "type": "whoosh"
     },
     {
+      "frame": 384,
+      "type": "pop"
+    },
+    {
+      "frame": 410,
+      "type": "pop"
+    },
+    {
+      "frame": 437,
+      "type": "pop"
+    },
+    {
       "frame": 460,
       "type": "whoosh"
     },
@@ -1412,8 +1498,16 @@
       "type": "whoosh"
     },
     {
+      "frame": 778,
+      "type": "pop"
+    },
+    {
       "frame": 1184,
       "type": "whoosh"
+    },
+    {
+      "frame": 1519,
+      "type": "pop"
     },
     {
       "frame": 1723,

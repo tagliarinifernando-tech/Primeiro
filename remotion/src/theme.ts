@@ -8,6 +8,7 @@ const LATIN_EXT_RANGE =
 
 const fontFamily = 'Montserrat';
 const dynamicFontFamily = 'Anton';
+const scriptFontFamily = 'Sacramento';
 
 for (const weight of ['500', '700', '900']) {
 	loadFont({
@@ -37,12 +38,26 @@ loadFont({
 	unicodeRange: LATIN_EXT_RANGE,
 });
 
+loadFont({
+	family: scriptFontFamily,
+	url: staticFile('fonts/sacramento-latin-400-normal.woff2'),
+	weight: '400',
+	unicodeRange: LATIN_RANGE,
+});
+loadFont({
+	family: scriptFontFamily,
+	url: staticFile('fonts/sacramento-latin-ext-400-normal.woff2'),
+	weight: '400',
+	unicodeRange: LATIN_EXT_RANGE,
+});
+
 export const theme = {
 	fontFamily,
 	dynamicFontFamily,
+	scriptFontFamily,
 	captionColor: '#FFFFFF',
 	captionSize: 40,
-	accentColor: '#FFFFFF',
+	accentColor: '#F4E3B8',
 	insertBg: '#0E0E10',
 	insertBgLight: '#F4F2ED',
 	endCardBg: '#0E0E10',

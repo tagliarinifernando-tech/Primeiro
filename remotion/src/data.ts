@@ -4,6 +4,7 @@ export interface CaptionWord {
 	text: string;
 	startFrame: number;
 	endFrame: number;
+	emphasis?: boolean;
 }
 
 export interface Caption {
@@ -11,6 +12,7 @@ export interface Caption {
 	endFrame: number;
 	text: string;
 	words?: CaptionWord[];
+	topPercent?: number;
 }
 
 export interface Segment {

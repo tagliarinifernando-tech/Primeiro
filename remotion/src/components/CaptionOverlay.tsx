@@ -16,7 +16,9 @@ const AnimatedWord: React.FC<{
 	text: string;
 	wordStartFrame: number;
 	frame: number;
-}> = ({text, wordStartFrame, frame}) => {
+	emphasis?: boolean;
+	baseFontSize: number;
+}> = ({text, wordStartFrame, frame, emphasis, baseFontSize}) => {
 	const {fps} = useVideoConfig();
 	const local = frame - wordStartFrame;
 	const s = spring({frame: local, fps, config: {damping: 12, stiffness: 220}, durationInFrames: 8});
@@ -32,7 +34,13 @@ const AnimatedWord: React.FC<{
 				display: 'inline-block',
 				opacity,
 				transform: `scale(${scale})`,
-				marginRight: '0.28em',
+				marginRight: emphasis ? '0.12em' : '0.28em',
+				marginLeft: emphasis ? '0.08em' : undefined,
+				fontFamily: emphasis ? theme.scriptFontFamily : undefined,
+				fontSize: emphasis ? baseFontSize * 1.7 : undefined,
+				fontWeight: emphasis ? 400 : undefined,
+				textTransform: emphasis ? 'none' : undefined,
+				color: emphasis ? theme.accentColor : undefined,
 			}}
 		>
 			{text}
@@ -60,12 +68,13 @@ export const CaptionOverlay: React.FC<{captions: Caption[]; frame: number} & Cap
 	});
 
 	const hasWords = active.words && active.words.length > 0;
+	const resolvedFontSize = fontSize ?? theme.captionSize;
 
 	return (
 		<div
 			style={{
 				position: 'absolute',
-				top: `${topPercent ?? 55}%`,
+				top: `${active.topPercent ?? topPercent ?? 55}%`,
 				left: 0,
 				right: 0,
 				display: 'flex',
@@ -78,7 +87,7 @@ export const CaptionOverlay: React.FC<{captions: Caption[]; frame: number} & Cap
 				style={{
 					fontFamily: fontFamily ?? theme.fontFamily,
 					fontWeight: fontWeight ?? 500,
-					fontSize: fontSize ?? theme.captionSize,
+					fontSize: resolvedFontSize,
 					color: color ?? theme.captionColor,
 					textAlign: 'center',
 					lineHeight: 1.3,
@@ -90,9 +99,11 @@ export const CaptionOverlay: React.FC<{captions: Caption[]; frame: number} & Cap
 					? active.words!.map((w, i) => (
 							<AnimatedWord
 								key={i}
-								text={uppercase ? w.text.toUpperCase() : w.text}
+								text={uppercase && !w.emphasis ? w.text.toUpperCase() : w.text}
 								wordStartFrame={w.startFrame}
 								frame={frame}
+								emphasis={w.emphasis}
+								baseFontSize={resolvedFontSize}
 							/>
 					  ))
 					: uppercase
