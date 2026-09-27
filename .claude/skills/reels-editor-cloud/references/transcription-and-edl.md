@@ -35,6 +35,16 @@ don't parse as Portuguese, or a proper noun that isn't a real word), that's a
 genuine ASR error — fix it against the script or by asking the user, never guess at
 technical/medical/proper-noun content.
 
+A subtler error slips past that same check: ASR sometimes swaps a word for a
+*different real word* that's grammatically wrong in context (e.g. "dermatologistas
+que trata psoríase" instead of "que tratam" — singular verb, plural subject).
+"Does this parse as Portuguese" doesn't catch it, because each individual word
+does parse fine; it's the agreement between words (subject-verb number, gender)
+that's broken. Once you've built the caption text, do one more pass reading each
+caption phrase as a full sentence for grammatical agreement, not just checking
+individual words against the script - this is exactly the kind of error a human
+proofreader would catch instantly but that's easy to miss word-by-word.
+
 ## Corrections: do them as data, not by re-typing the transcript
 
 Build a small ordered list of `(wrong_word_or_phrase, word_count, replacement)`
