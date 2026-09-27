@@ -39,7 +39,7 @@ const AnimatedWord: React.FC<{
 				marginLeft: emphasis ? '0.08em' : undefined,
 				fontFamily: emphasis ? theme.scriptFontFamily : undefined,
 				fontStyle: emphasis ? 'italic' : undefined,
-				fontSize: emphasis ? baseFontSize * 2.4 : undefined,
+				fontSize: emphasis ? baseFontSize * 3.1 : undefined,
 				fontWeight: emphasis ? 400 : undefined,
 				letterSpacing: emphasis ? 'normal' : undefined,
 				textTransform: emphasis ? 'none' : undefined,
@@ -120,7 +120,7 @@ export const CaptionOverlay: React.FC<{captions: Caption[]; frame: number} & Cap
 					display: hasWords ? 'flex' : undefined,
 					flexDirection: hasWords ? 'column' : undefined,
 					alignItems: hasWords ? justify : undefined,
-					gap: hasWords ? '0.1em' : undefined,
+					gap: hasWords ? '0.28em' : undefined,
 				}}
 			>
 				{hasWords
