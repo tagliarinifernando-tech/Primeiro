@@ -130,6 +130,19 @@ word — it's a small layout change plus a font choice, together:
   Check this whenever the block's height can vary with content (an emphasis
   line, a variable number of wrapped words) rather than always being exactly
   one line.
+- **Give emphasis captions their own, much lower `topPercent`, separate from
+  the plain-caption cycle.** Fixing the bottom-clipping bug (previous bullet)
+  means a tall emphasis block grows upward from wherever it's anchored - so
+  reusing the *same* position cycle you use for short single-line captions
+  puts a huge emphasis line right across the mouth/chin, since that cycle was
+  tuned for one line's height, not three. Split it: keep the existing small
+  cycle (e.g. `[72, 67, 75]`) for captions with no emphasis word, and give any
+  caption that has one a single, dedicated, noticeably-lower value (landed on
+  `92` in one video) computed and confirmed the same way — don't trust font-
+  metric arithmetic alone here, actually render a still of the *tallest* real
+  caption in the video (the one with the most non-emphasis words around the
+  emphasis line) at your candidate value and look at where it lands relative
+  to the face before committing to it.
 - **Keep the caption block centered.** A left-margin-aligned block (an
   `align: 'center' | 'left'` prop exists on the container for this, default
   `'center'`) was tried because it's a recognizable, screenshot-able look on
