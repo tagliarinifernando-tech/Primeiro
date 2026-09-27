@@ -116,6 +116,20 @@ word — it's a small layout change plus a font choice, together:
   (well under `0.1em`) — a generous gap (tried at `0.25–0.3em`) reads as the
   lines drifting apart rather than one cohesive caption block, and got
   reverted in real feedback.
+- **Anchor the block by its bottom, not its top, once it can grow taller
+  than one line.** If `CaptionOverlay` positions the block with `top:
+  topPercent%` and lets it grow downward, a caption with no emphasis word is
+  short and fine, but the moment one has an oversized emphasis line the block
+  gets much taller and its *bottom* edge can push past the bottom of the
+  frame — reported directly as words getting cut off at the bottom of the
+  video. Anchor with `bottom` instead, computed so a single base-size line at
+  `topPercent` lands exactly where it used to (`bottom: calc(${100 -
+  topPercent}% - ${oneLineHeightPx}px)`, with `oneLineHeightPx ≈ fontSize *
+  1.3`): a plain caption renders identically, but a taller multi-line one now
+  grows upward from that fixed bottom point instead of overflowing downward.
+  Check this whenever the block's height can vary with content (an emphasis
+  line, a variable number of wrapped words) rather than always being exactly
+  one line.
 - **Keep the caption block centered.** A left-margin-aligned block (an
   `align: 'center' | 'left'` prop exists on the container for this, default
   `'center'`) was tried because it's a recognizable, screenshot-able look on
