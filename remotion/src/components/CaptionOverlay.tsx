@@ -37,7 +37,7 @@ const AnimatedWord: React.FC<{
 				marginRight: emphasis ? '0.12em' : '0.28em',
 				marginLeft: emphasis ? '0.08em' : undefined,
 				fontFamily: emphasis ? theme.scriptFontFamily : undefined,
-				fontSize: emphasis ? baseFontSize * 1.6 : undefined,
+				fontSize: emphasis ? baseFontSize * 2.4 : undefined,
 				fontWeight: emphasis ? 400 : undefined,
 				letterSpacing: emphasis ? 'normal' : undefined,
 				textTransform: emphasis ? 'none' : undefined,
