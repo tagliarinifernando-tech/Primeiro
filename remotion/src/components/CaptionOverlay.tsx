@@ -72,6 +72,24 @@ export const CaptionOverlay: React.FC<{captions: Caption[]; frame: number} & Cap
 	const hasWords = active.words && active.words.length > 0;
 	const resolvedFontSize = fontSize ?? theme.captionSize;
 
+	// group words into lines: an emphasized word breaks onto its own line,
+	// so it reads as a standalone accent rather than sitting inline mid-sentence
+	type Words = NonNullable<typeof active.words>;
+	const lineGroups: Words[] = [];
+	if (hasWords) {
+		let current: Words = [];
+		for (const w of active.words!) {
+			if (w.emphasis) {
+				if (current.length) lineGroups.push(current);
+				lineGroups.push([w]);
+				current = [];
+			} else {
+				current.push(w);
+			}
+		}
+		if (current.length) lineGroups.push(current);
+	}
+
 	return (
 		<div
 			style={{
@@ -95,18 +113,26 @@ export const CaptionOverlay: React.FC<{captions: Caption[]; frame: number} & Cap
 					lineHeight: 1.3,
 					textShadow: '0 2px 8px rgba(0,0,0,0.7)',
 					letterSpacing: uppercase ? 1 : undefined,
+					display: hasWords ? 'flex' : undefined,
+					flexDirection: hasWords ? 'column' : undefined,
+					alignItems: hasWords ? 'center' : undefined,
+					gap: hasWords ? '0.1em' : undefined,
 				}}
 			>
 				{hasWords
-					? active.words!.map((w, i) => (
-							<AnimatedWord
-								key={i}
-								text={uppercase && !w.emphasis ? w.text.toUpperCase() : w.text}
-								wordStartFrame={w.startFrame}
-								frame={frame}
-								emphasis={w.emphasis}
-								baseFontSize={resolvedFontSize}
-							/>
+					? lineGroups.map((line, li) => (
+							<div key={li} style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center'}}>
+								{line.map((w, i) => (
+									<AnimatedWord
+										key={i}
+										text={uppercase && !w.emphasis ? w.text.toUpperCase() : w.text}
+										wordStartFrame={w.startFrame}
+										frame={frame}
+										emphasis={w.emphasis}
+										baseFontSize={resolvedFontSize}
+									/>
+								))}
+							</div>
 					  ))
 					: uppercase
 					? active.text.toUpperCase()
