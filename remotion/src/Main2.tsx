@@ -95,7 +95,6 @@ export const Main2: React.FC = () => {
 					fontSize={46}
 					uppercase
 					topPercent={72}
-					align="left"
 				/>
 			)}
 			<KeywordStack
