@@ -34,11 +34,13 @@ const AnimatedWord: React.FC<{
 				display: 'inline-block',
 				opacity,
 				transform: `scale(${scale})`,
-				marginRight: emphasis ? '0.16em' : '0.28em',
-				marginLeft: emphasis ? '0.1em' : undefined,
-				fontFamily: emphasis ? theme.dynamicFontFamily : undefined,
-				fontSize: emphasis ? baseFontSize * 1.35 : undefined,
+				marginRight: emphasis ? '0.12em' : '0.28em',
+				marginLeft: emphasis ? '0.08em' : undefined,
+				fontFamily: emphasis ? theme.scriptFontFamily : undefined,
+				fontSize: emphasis ? baseFontSize * 1.6 : undefined,
 				fontWeight: emphasis ? 400 : undefined,
+				letterSpacing: emphasis ? 'normal' : undefined,
+				textTransform: emphasis ? 'none' : undefined,
 				color: emphasis ? theme.accentColor : undefined,
 			}}
 		>
@@ -98,7 +100,7 @@ export const CaptionOverlay: React.FC<{captions: Caption[]; frame: number} & Cap
 					? active.words!.map((w, i) => (
 							<AnimatedWord
 								key={i}
-								text={uppercase ? w.text.toUpperCase() : w.text}
+								text={uppercase && !w.emphasis ? w.text.toUpperCase() : w.text}
 								wordStartFrame={w.startFrame}
 								frame={frame}
 								emphasis={w.emphasis}

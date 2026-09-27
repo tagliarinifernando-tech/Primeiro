@@ -8,6 +8,7 @@ const LATIN_EXT_RANGE =
 
 const fontFamily = 'Montserrat';
 const dynamicFontFamily = 'Anton';
+const scriptFontFamily = 'Birthstone';
 
 for (const weight of ['500', '700', '900']) {
 	loadFont({
@@ -37,9 +38,23 @@ loadFont({
 	unicodeRange: LATIN_EXT_RANGE,
 });
 
+loadFont({
+	family: scriptFontFamily,
+	url: staticFile('fonts/birthstone-latin-400-normal.woff2'),
+	weight: '400',
+	unicodeRange: LATIN_RANGE,
+});
+loadFont({
+	family: scriptFontFamily,
+	url: staticFile('fonts/birthstone-latin-ext-400-normal.woff2'),
+	weight: '400',
+	unicodeRange: LATIN_EXT_RANGE,
+});
+
 export const theme = {
 	fontFamily,
 	dynamicFontFamily,
+	scriptFontFamily,
 	captionColor: '#FFFFFF',
 	captionSize: 40,
 	accentColor: '#F4E3B8',
