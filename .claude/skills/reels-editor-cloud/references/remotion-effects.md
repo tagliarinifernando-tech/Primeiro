@@ -88,36 +88,63 @@ Three small, cheap details separate a captioned talking-head video that reads as
 of them require new architecture — they're refinements to the same
 `CaptionOverlay`/EDL data you already have.
 
-**1. Two typographies, not one.** If every word in the caption shares the same
-font, weight, size, and color, nothing stands out — the eye has nowhere to land
-and the one phrase you actually want to stick (the diagnosis, the drug name, the
-number, the punchline word) reads exactly as important as "e", "só", "que". Give
-the EDL/caption data a way to mark specific words within a phrase as emphasized
+**1. Two typographies, not one — and let the emphasized word break its own
+line.** If every word in the caption shares the same font, weight, size, and
+color, nothing stands out — the eye has nowhere to land and the one phrase you
+actually want to stick (the diagnosis, the drug name, the number, the
+punchline word) reads exactly as important as "e", "só", "que". Give the
+EDL/caption data a way to mark specific words within a phrase as emphasized
 (reuse the `words[]` array you already build for word-by-word pop-in: add an
 `emphasis?: boolean` flag per word, set by the same editorial pass that already
-reads the transcript for keyword events), and have `CaptionOverlay` render an
-emphasized word in the video's *display*/dynamic font (`theme.dynamicFontFamily`
-— the same bold condensed face used for `KeywordStack`) while the rest of the
-phrase stays in the base font (`theme.fontFamily`). A color shift (e.g. the
-theme's accent/glow color) or a slightly larger size on the emphasized word alone
-reinforces the same point but isn't required — the font swap by itself already
-does most of the work.
+reads the transcript for keyword events).
 
-Default to the bold condensed display font (`theme.dynamicFontFamily`) for
-this, sized ~1.3–1.4x the base caption text — that alone reads as a clear,
-confident accent without needing a second creative decision. There's also an
-elegant cursive/script serif pairing (script word against plain sans base,
-run 1.5–2x larger, like a magazine pull-quote) that can look striking in a
-mockup — but treat it as an alternative to *propose and confirm* with the
-specific creator before building a whole video around it, not a safe default:
-it's a much bigger stylistic swing than a bold/condensed accent, and reads as
-too decorative/precious to some presenters even when the isolated example
-looks polished. If you do add a script font, load it the same way as the
-other two (see `environment-workarounds.md`'s Fonts section) as a third
-`theme.ts` family (e.g. `theme.scriptFontFamily`) so it's easy to add or fully
-remove without touching anything else — and if the creator pushes back on it,
-that's a "no" on the whole cursive direction, not a cue to tune size/color
-and try again with the same font.
+The elegant, dynamic version of this is more than a font swap on an inline
+word — it's a small layout change plus a font choice, together:
+
+- **Break the emphasized word onto its own line** instead of leaving it inline
+  in the sentence (group the caption's words into lines, closing the current
+  line whenever an emphasized word appears, putting it alone on its own line,
+  then resuming the rest of the phrase on a new line after). This is what lets
+  the next point work at all — an inline emphasized word can only get so big
+  before it collides with its neighbors, but an isolated word on its own line
+  can run genuinely large.
+- **Go bigger than feels safe at first** — validated up to ~3x the base
+  caption size once the word has its own line and a generous gap (`0.25–0.3em`
+  or more) above and below it to breathe. A same-size or 1.3–1.5x emphasis
+  reads as timid once you've seen the isolated-line version; there isn't much
+  of a ceiling as long as the word still fits within the frame width at your
+  chosen font.
+- **Consider left-margin alignment instead of centered** for the whole caption
+  block (an `align: 'center' | 'left'` prop on the container, default
+  `'center'` to preserve older compositions) — a left-anchored block with a
+  big emphasized word breaking onto its own line at that same margin is a
+  recognizable, screenshot-able Reels/TikTok caption style (a numeral or short
+  hook phrase up top, a big accent word, a short line closing it out), more
+  editorial-magazine than centered subtitle-style captions.
+
+On font choice, three options exist on a spectrum from safe to bold, and real
+feedback across iterations narrowed which ones actually land:
+- The bold condensed display font already used for `KeywordStack`
+  (`theme.dynamicFontFamily`) is the safest choice and needs no new asset.
+- A **connected cursive/handwriting script** (e.g. Sacramento, Birthstone) reads
+  as too decorative/precious in practice — this got rejected twice in real
+  feedback even though isolated mockups of the same idea looked appealing.
+  Don't reach for this first.
+- An **italic serif** (e.g. Instrument Serif Italic) sits in between — elegant
+  and editorial without the handwritten quality that scripts get pushback on —
+  and is what actually got approved after the script attempts didn't land. If
+  you're picking a decorative emphasis font without a specific reference to
+  match, try an italic serif before a connected script.
+Load whichever one you land on the same way as the other two theme fonts (see
+`environment-workarounds.md`'s Fonts section) as a third `theme.ts` family
+(e.g. `theme.scriptFontFamily` — the name predates settling on a serif, but
+there's no need to rename it) so it's easy to add or fully remove without
+touching anything else. If the creator sends a specific Google Fonts link or a
+screenshot of a style they want, install that exact font (or the closest
+visual match to a screenshot, confirmed with them first) rather than
+defaulting to your own pick — font choice here is much more a matter of
+personal taste than the other effects in this file, so don't over-invest in
+a "recommended default" once someone has told you what they actually want.
 
 Pick emphasis words the same way you already pick
 `KeywordStack` keywords (the thesis word, a number, a proper noun, a strong
