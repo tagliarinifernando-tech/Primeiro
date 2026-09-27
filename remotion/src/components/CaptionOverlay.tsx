@@ -127,7 +127,7 @@ export const CaptionOverlay: React.FC<{captions: Caption[]; frame: number} & Cap
 					display: hasWords ? 'flex' : undefined,
 					flexDirection: hasWords ? 'column' : undefined,
 					alignItems: hasWords ? justify : undefined,
-					gap: hasWords ? '0.05em' : undefined,
+					gap: hasWords ? '0' : undefined,
 				}}
 			>
 				{hasWords
