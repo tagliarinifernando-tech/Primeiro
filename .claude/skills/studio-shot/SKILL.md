@@ -1,13 +1,13 @@
 ---
 name: studio-shot
-description: "PYNK Studio Shot - turns any product photo (iPhone snap, lifestyle shot, messy background) into one ready-to-paste image prompt for a clean studio product shot on a flat background, with the photo attached as the reference. It only writes the prompt; it never generates anything. Use when the user runs /studio-shot, or wants a clean product shot, a white-background packshot, a studio product image, or to clean up a product photo."
+description: "PYNK Studio Shot - turns any product photo (iPhone snap, lifestyle shot, messy background) into one ready-to-paste image prompt for a clean studio product shot on a flat background, with the photo attached as the reference. It writes the prompt and, only after the user OKs the credit cost, generates it on their Higgsfield account. Use when the user runs /studio-shot, or wants a clean product shot, a white-background packshot, a studio product image, or to clean up a product photo."
 ---
 
 # PYNK Studio Shot — the /studio-shot skill
 
-This skill turns any product photo into a **clean studio product shot** by writing the one prompt the user needs and telling them exactly what to attach and how to run it. The user pastes the prompt into their own image generator; this skill **never generates anything itself**.
+This skill turns any product photo into a **clean studio product shot** by writing the one prompt the user needs and telling them exactly what to attach and how to run it. It then generates the shot on the user's Higgsfield account — **only after the user sees the credit cost and says ok**.
 
-**Prompts only — hard lock.** This skill writes a prompt and a settings table. It NEVER triggers a generation, never calls a generation tool, never runs a script. If a generation tool is available in the session, do not use it — the user runs their own generation.
+**Generation — only with the user's OK (hard lock).** This skill writes the prompt AND can generate it on the user's Higgsfield account. Before the first generation, read `skill-packs/higgsfield-protocol.md` (repo root) and follow it exactly: never spend a credit without first showing, on a generation card, the current balance (`balance`), the exact cost (same params + `get_cost: true`) and the balance after — then STOP and generate only after an explicit "ok" to that card. If the user says "só o prompt" / wants to run it themselves, hand off as before (prompt + settings table + attachments).
 
 **Stateless — chat only.** Do not create, edit or save any files, and do not create or update memory. The product, the background and the prompt live in THIS conversation only.
 
@@ -87,7 +87,7 @@ Product centred and upright in the frame, with even space around it. No hands, n
 | Aspect | [chosen format] |
 | Attachments | 1) your product photo — attach it, this is what keeps the product exact |
 
-Then one line: *"Run it with your photo attached. If the label text comes out wrong, just generate again — text varies between runs."*
+Then the **generation card** from the protocol (model `gpt_image_2`, quality high, resolution 2k, the chosen aspect, attachment = the user's photo) and STOP for the ok. After the result, one line: *"If the label text comes out wrong, generate again — text varies between runs."* (a new generation = a new card).
 
 Then **Next moves**:
 

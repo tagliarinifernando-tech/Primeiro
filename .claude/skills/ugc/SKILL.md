@@ -1,13 +1,13 @@
 ---
 name: ugc
-description: "PYNK AI UGC Studio — a guided pipeline that turns any product into a realistic 15-second UGC selfie-review ad. The skill only WRITES prompts and assembles the asset list — it never runs a generation. Three steps for the user: (1) Model — describe the model, get headshot + full-body image prompts on a mid-gray studio baseline, (2) Product & Scene — name the product (name + category) and pick a scene, (3) Script — write the spoken script in any format, guided by a four-piece shape; the skill fits it into a locked 4-beat / 15s structure and immediately assembles the full Seedance 2.0 multi-shot master prompt with @image1–3 reference tags, camera switches written as the creator's actions, script lines verbatim, and the UGC realism closing block — delivered prompt-on-top with a concise generation brief below. Use whenever the user runs /ugc, wants a UGC ad, a selfie-review video, an AI creator ad, a TikTok-style product review, or asks to build a UGC character, script, or video prompt."
+description: "PYNK AI UGC Studio — a guided pipeline that turns any product into a realistic 15-second UGC selfie-review ad. The skill writes every prompt and assembles the asset list, and generates each asset on the user's Higgsfield account only after the user OKs the credit cost. Three steps for the user: (1) Model — describe the model, get headshot + full-body image prompts on a mid-gray studio baseline, (2) Product & Scene — name the product (name + category) and pick a scene, (3) Script — write the spoken script in any format, guided by a four-piece shape; the skill fits it into a locked 4-beat / 15s structure and immediately assembles the full Seedance 2.0 multi-shot master prompt with @image1–3 reference tags, camera switches written as the creator's actions, script lines verbatim, and the UGC realism closing block — delivered prompt-on-top with a concise generation brief below. Use whenever the user runs /ugc, wants a UGC ad, a selfie-review video, an AI creator ad, a TikTok-style product review, or asks to build a UGC character, script, or video prompt."
 ---
 
 # PYNK AI UGC Studio — the /ugc pipeline
 
-This skill turns a product into a **realistic 15-second UGC selfie-review ad** — by writing every prompt the user needs and telling them exactly what to attach and how to run it. The user pastes the prompts into their own image and video generators; this skill **never generates anything itself**.
+This skill turns a product into a **realistic 15-second UGC selfie-review ad** — by writing every prompt the user needs and telling them exactly what to attach and how to run it. It can then generate each image and the final video on the user's Higgsfield account — **only after the user sees the credit cost and says ok**.
 
-**Prompts only — hard lock.** This skill writes prompts and assembles asset lists. It NEVER triggers a generation, never calls a generation tool. If a generation tool is available in the session, do not use it — the user runs their own generations.
+**Generation — only with the user's OK (hard lock).** This skill writes the prompt AND can generate it on the user's Higgsfield account. Before the first generation, read `skill-packs/higgsfield-protocol.md` (repo root) and follow it exactly: never spend a credit without first showing, on a generation card, the current balance (`balance`), the exact cost (same params + `get_cost: true`) and the balance after — then STOP and generate only after an explicit "ok" to that card. If the user says "só o prompt" / wants to run it themselves, hand off as before (prompt + settings table + attachments).
 
 **Stateless — no memory.** This is a standalone prompt-writing pipeline. Do NOT create or update any memory files, and do NOT treat prior-session memory as canonical — the model, product, script, and assets live in THIS conversation only. Never pause the workflow to save or reconcile memory; just build the prompts.
 
@@ -49,7 +49,7 @@ This is NOT cinema. No anamorphic lenses, no film grain, no color grade, no craf
 
 ## UNIVERSAL RULES (ALL PHASES)
 
-1. **Prompts only.** Never trigger a generation, never call a generation tool. The output of this skill is text the user pastes elsewhere.
+1. **Generate only through the gate.** Every generation (headshot, full body, final video) goes through the Higgsfield protocol: balance + exact cost on a card, then an explicit ok. Generated images feed the next step by `job_id` (they become @image1–3). Never spend without the ok.
 2. **Chat reads like a product UI.** Tables over prose, checkmarks for status, short lines, no text walls. Every recurring element (asset kit, settings, script beats, generation brief) is a table. Confirmations are one line.
 3. **Delivery format, every prompt:** (a) a bolded title line, (b) ONE fenced code block containing the full prompt, (c) the **settings table BELOW the code block** (below it, not above — the prompt is long, so the table stays visible at the bottom with the prompt right above).
 4. **Pre-prompt check before every prompt — short.** Maximum four telegraphic bullets, attachments first, one confirm line ("Sound good?"). The user sees the full prompt anyway — the check is a glance, not a briefing. Skip it for minor iterations on a prompt just delivered.
@@ -113,7 +113,7 @@ Mid-gray seamless studio background — even neutral mid-gray, no seam line, no 
 | Attachments | none — pure text-to-image |
 ```
 
-Then gate: "Run this in your image generator. When you're happy with her face, tell me **done** — then we build the full body."
+Then the **generation card** (protocol; `gpt_image_2`, 3:4, 2k, no attachments) and STOP. On ok, generate and show her face. Gate: "Happy with her face? Say **done** — or ask for another take (new card) — then we build the full body." Keep the approved result's `job_id` as image 1. ("só o prompt" → the user runs it and brings the image back.)
 
 ### Prompt B — Full body
 
@@ -138,7 +138,7 @@ Mid-gray seamless studio background — even neutral mid-gray, no seam line, no 
 | Attachments | 1) the headshot (face reference) — attach it, this is what keeps her face consistent |
 ```
 
-Gate: "Run it with the headshot attached. When your character is done — headshot and full body — tell me **done**."
+Then the **generation card** (protocol; `gpt_image_2`, 3:4, 2k, attachment 1 = the headshot's `job_id`) and STOP. On ok, generate. Gate: "Happy with the full body? Say **done** — or ask for another take." Keep its `job_id` as image 2.
 
 ### Reference images — DNA, never assets
 
@@ -146,7 +146,7 @@ When the user drops ANY reference image (a model photo from Pinterest, an outfit
 
 - **Read it visual-only and extract the full DNA** — hair (every nuance), face structure, eye shape and color, skin tone and finish, identity markers like freckles or piercings, build; for outfit references: every garment head to toe, fabric, fit, footwear. Never invent details not visible.
 - **Mirror the extracted spec back** as the locked model spec, let the user confirm or correct.
-- **Then run Prompt A and Prompt B exactly as normal.** The user generates their OWN headshot and full body from the prompts. A pasted reference NEVER becomes image 1, 2, or 3 of the asset kit — it isn't theirs and it isn't consistent with the pipeline. The reference feeds the spec; the prompts make the assets.
+- **Then run Prompt A and Prompt B exactly as normal.** Their OWN headshot and full body are generated from the prompts (through the gate). A pasted reference NEVER becomes image 1, 2, or 3 of the asset kit — it isn't theirs and it isn't consistent with the pipeline. The reference feeds the spec; the prompts make the assets.
 - A face reference and an outfit reference can be combined — face DNA into Prompt A, outfit DNA into Prompt B.
 
 **The one exception:** if the user says the images are their own previously **generated** character (made with this pipeline or equivalent), those can serve as image 1 / image 2 directly — confirm, lock the spec from them, and skip the prompts they already cover. When in doubt, ask one short question: "Is this your generated character, or inspiration to build from?"
@@ -180,7 +180,7 @@ Two locks, both presented with tables. Ask them together in one message:
 
 The user gives a rough scene only — **grounding it into a concrete place (light source, surfaces, props) is the skill's job later, in the master prompt's scene paragraph.** Never ask the user for light directions or set dressing.
 
-The product name + category are what the master prompt is written from. The user also needs **one clean photo of the product** (straight on, filling the frame, simple background — a phone photo works) as **image 3** for the video generator. The photo is an attachment for the generator, never a source for written description — the product's colors, packaging, and branding are NEVER described in any prompt. Reference only.
+The product name + category are what the master prompt is written from. The user also needs **one clean photo of the product** (straight on, filling the frame, simple background — a phone photo works) as **image 3** for the video generator — ask them to send it here; upload it to Higgsfield per the protocol. The photo is an attachment for the generator, never a source for written description — the product's colors, packaging, and branding are NEVER described in any prompt. Reference only.
 
 Close the step with the asset recap — tight table, no extra sentences:
 
@@ -278,7 +278,7 @@ Iterate until the user locks it. **Locked lines ship verbatim into the master pr
 | Attachments | 1) headshot · 2) full body · 3) product photo — add them exactly in this order |
 ```
 
-5. One tight closing paragraph: *"Above is your full master prompt. If everything looks right, copy it as one block into Seedance 2.0 and attach the three images exactly in this order. Want anything changed — scene, a beat, a line? Tell me and I'll rewrite it."*
+5. The **generation card** (protocol; `seedance_2_5` — nearest allowed duration to 15s, the chosen aspect and resolution; medias in order: headshot job_id, full-body job_id, product media_id) and one line: *"Want anything changed first — scene, a beat, a line? Tell me and I'll rewrite it. Otherwise **ok** to generate."* STOP. Generate only on ok, then show the video and the credits line.
 6. **Next moves** — clean bullets, nicely formatted:
 
 > **Next moves:**

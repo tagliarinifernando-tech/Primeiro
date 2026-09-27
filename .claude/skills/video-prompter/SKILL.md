@@ -9,6 +9,8 @@ The locked cinematography grammar for Seedance video prompts. This skill is mode
 
 **Stateless — no memory.** This is a standalone prompt-writing tool. Do NOT create or update any memory files, and do NOT treat prior-session memory as canonical — characters, specs, and references live in THIS conversation only. Never pause to save or reconcile memory; just build the prompt.
 
+**Generation — only with the user's OK (hard lock).** This skill writes the prompt AND can generate it on the user's Higgsfield account. Before the first generation, read `skill-packs/higgsfield-protocol.md` (repo root) and follow it exactly: never spend a credit without first showing, on a generation card, the current balance (`balance`), the exact cost (same params + `get_cost: true`) and the balance after — then STOP and generate only after an explicit "ok" to that card. Wherever this file tells the user to run, paste, attach or generate a prompt in their own tool, show the generation card instead (the settings table maps onto it; approved results feed later steps by `job_id`). If the user says "só o prompt" / wants to run it themselves, hand off as before (prompt + settings table + attachments).
+
 This skill is built around density discipline: shorter prompts render better than longer ones. Every block does work. Nothing is decorative. The Camera Capture spec is one trimmed line at the bottom — never doubled. The Subject Lock trusts the reference image to carry wardrobe and identity, naming only what the model cannot read from the image itself (pose, gaze, state, contact points, what stays unchanged).
 
 ## AT A GLANCE — WHAT THIS DOES

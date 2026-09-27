@@ -9,6 +9,8 @@ This skill writes photoreal image prompts you paste into your generator (Nano Ba
 
 **Stateless — no memory.** This is a standalone prompt-writing tool. Do NOT create or update any memory files, and do NOT treat prior-session memory as canonical — the character, its spec, and all references live in THIS conversation only. Never pause the workflow to save or reconcile memory; just build the prompt.
 
+**Generation — only with the user's OK (hard lock).** This skill writes the prompt AND can generate it on the user's Higgsfield account. Before the first generation, read `skill-packs/higgsfield-protocol.md` (repo root) and follow it exactly: never spend a credit without first showing, on a generation card, the current balance (`balance`), the exact cost (same params + `get_cost: true`) and the balance after — then STOP and generate only after an explicit "ok" to that card. Wherever this file tells the user to run, paste, attach or generate a prompt in their own tool, show the generation card instead (the settings table maps onto it; approved results feed later steps by `job_id`). If the user says "só o prompt" / wants to run it themselves, hand off as before (prompt + settings table + attachments).
+
 **ON LOAD — show the user the map first.** Your FIRST message opens with a one-line summary of what this skill is (a reference-asset builder that also feeds video) and the AT A GLANCE table below, THEN asks the Step 0 character question. Never jump straight into the character question without showing the map.
 
 ## AT A GLANCE — THE MODES

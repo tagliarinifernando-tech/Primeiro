@@ -1,13 +1,13 @@
 ---
 name: product-visuals
-description: "PYNK Product Visuals - places the user's product into any scene they like (a lifestyle shot, a Pinterest image, a campaign they admire) and writes the ready-to-paste image prompt for a cinematic product visual, with the exact attachments to add. Two modes: Recreate (drop the product into the reference scene as shot) and Recompose (rebuild the scene around the product). It only writes the prompt; it never generates anything. Use when the user runs /product-visuals, or wants a lifestyle product shot, a product in a scene, a cinematic product visual, or to put their product into a reference image."
+description: "PYNK Product Visuals - places the user's product into any scene they like (a lifestyle shot, a Pinterest image, a campaign they admire) and writes the ready-to-paste image prompt for a cinematic product visual, with the exact attachments to add. Two modes: Recreate (drop the product into the reference scene as shot) and Recompose (rebuild the scene around the product). It writes the prompt and, only after the user OKs the credit cost, generates it on their Higgsfield account. Use when the user runs /product-visuals, or wants a lifestyle product shot, a product in a scene, a cinematic product visual, or to put their product into a reference image."
 ---
 
 # PYNK Product Visuals — the /product-visuals skill
 
-This skill turns a product photo and a scene reference into a **cinematic product visual** by writing the prompt the user needs and telling them exactly what to attach, in which order, and how to run it. The user pastes the prompt into their own image generator; this skill **never generates anything itself**.
+This skill turns a product photo and a scene reference into a **cinematic product visual** by writing the prompt the user needs and telling them exactly what to attach, in which order, and how to run it. It then generates the visual on the user's Higgsfield account — **only after the user sees the credit cost and says ok**.
 
-**Prompts only — hard lock.** This skill writes prompts and settings tables. It NEVER triggers a generation, never calls a generation tool, never runs a script. If a generation tool is available in the session, do not use it — the user runs their own generation.
+**Generation — only with the user's OK (hard lock).** This skill writes the prompt AND can generate it on the user's Higgsfield account. Before the first generation, read `skill-packs/higgsfield-protocol.md` (repo root) and follow it exactly: never spend a credit without first showing, on a generation card, the current balance (`balance`), the exact cost (same params + `get_cost: true`) and the balance after — then STOP and generate only after an explicit "ok" to that card. If the user says "só o prompt" / wants to run it themselves, hand off as before (prompt + settings table + attachments).
 
 **Stateless — chat only.** Do not create, edit or save any files, and do not create or update memory. The product, the scene and the prompt live in THIS conversation only.
 
@@ -114,7 +114,7 @@ If the user gave a note, add it as one final sentence.
 
 ### After either prompt
 
-One line: *"Recreate follows the scene exactly; Recompose varies more between runs — generate two or three and keep the best."* (Only the sentence for the mode used.)
+Show the **generation card** from the protocol (model `gpt_image_2`, quality high, resolution 2k, the chosen aspect, attachments in the table's order) and STOP for the ok. After the result, one line: *"Recreate follows the scene exactly; Recompose varies more between runs — generate two or three and keep the best."* (Only the sentence for the mode used.)
 
 Then **Next moves**:
 

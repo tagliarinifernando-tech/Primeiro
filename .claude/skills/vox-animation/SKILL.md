@@ -11,7 +11,8 @@ description: >
   video", "data-driven video", "paper collage documentary", "make a video
   about X" — or greets/asks to start inside this studio folder. Always runs
   as a staged guided flow: it opens with a short welcome + one question and
-  waits; it never picks a topic on its own and never spends anything.
+  waits; it never picks a topic on its own and never spends a credit
+  without showing the balance and cost and getting an explicit ok.
 ---
 
 # Vox Animation — guided explainer-video studio
@@ -21,6 +22,16 @@ video: script → generation prompts (run in the user's own generator) → free
 local voiceover → final cut assembled by Claude. The video is built as
 **N scenes × 10 seconds** (60s = 6 scenes); scene N's narration lands on
 scene N's clip.
+
+**Generation — only with the user's OK (hard lock).** In this repo the
+style key and the scene clips can be generated on the user's Higgsfield
+account. Before the first generation, read `skill-packs/higgsfield-protocol.md`
+(repo root) and follow it exactly: never spend a credit without first
+showing, on a generation card, the current balance, the exact cost (same
+params + `get_cost: true`) and the balance after — then STOP and generate
+only after an explicit "ok" to that card. "só o prompt" → the user runs it
+in their own generator, as originally designed. The Global UI rule "zero
+internal chatter" never hides a cost: the card is always shown.
 
 ## Global UI rules — every message the skill sends
 
@@ -202,7 +213,10 @@ On the pick, second message: the clean pasteable prompt block, then:
 > | Aspect ratio | <the video's aspect> |
 > | Type | image |
 >
-> Say `done` when you have your image — then we generate the scenes.
+> Then the **generation card** (protocol; Nano Banana Pro if Higgsfield has it,
+> else `gpt_image_2` — say which). On ok, generate and show it; its `job_id`
+> is the style key for every scene. "Another take" = new card. Say `done` when
+> you like it — then we generate the scenes.
 
 STOP.
 
@@ -229,6 +243,15 @@ asking for everything at once gets all scenes in one message):
 > | Sound | ON — ambient SFX is designed into the prompt |
 > | Save the download as | **`block0k.mp4`** |
 
+In this repo the table is followed by the **generation card** for that scene
+(protocol; Gemini Omni Flash if Higgsfield has it, else `seedance_2_5` —
+10s, the video's aspect, 720p, sound on; medias: the style key's `job_id`).
+Offer once, at scene 1: "Quer que eu gere todas as N cenas de uma vez?" —
+if yes, ONE card listing every scene and the total cost, one ok for all.
+Generated clips are downloaded silently into `projects/<slug>/clips/block0k.mp4`
+(result URL from `jobs_wait`, fetched with `curl`), so Stage 8 is skipped for
+them.
+
 Prompt rules (from the reference file): visualize the line's *idea*; no
 readable text in clips (mixed style — diorama's letterpress prop labels
 are the exception); nobody speaks on screen; NEGATIVE line copied verbatim
@@ -242,6 +265,8 @@ into every scene.
 > — then say `done`. Named `block01…06`? Perfect. Named something else?
 > Also fine — I'll sort it out.
 
+Skip this stage for clips Claude generated (already in `clips/`).
+
 On `done`: verify count, rename obvious variants silently (`block 1`,
 `Block-2`, …), ask ONLY when genuinely ambiguous — never guess a pairing.
 
@@ -252,6 +277,10 @@ No narration of any of this. Voice all N lines with the chosen voice into
 shorten the line, re-voice; < 7.5s → lengthen the line, re-voice** (free,
 invisible). Then run the skill's `scripts/assemble.sh projects/<slug>` →
 `final.mp4`, exactly N × 10s.
+
+If edge-tts cannot reach its service from this machine, say so in one line
+and offer the Higgsfield voice (`generate_audio`, default `seed_audio`) —
+through the gate: balance + cost card for all N lines, explicit ok.
 
 ## Stage 10 — Delivery
 

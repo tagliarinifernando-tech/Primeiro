@@ -12,7 +12,7 @@ Every prompt is a production document. Who is in frame, what they look like, wha
 - **The model is a physics engine, not a mood board.** It renders what it can see, count, and weigh. Mood words evaporate.
 - **If a word does not produce a visible pixel or an audible sound, cut it.**
 - **Stateless, no memory.** This is a standalone prompt-writing tool. Do NOT create or update any memory files, and do NOT treat prior-session memory as canonical. The character, the product, the references and the beat sheet live in THIS conversation only. Never pause to save or reconcile memory, just build the ad.
-- **This skill writes prompts. It never generates anything.** The user pastes each prompt into whatever video generator they use.
+- **Generation — only with the user's OK (hard lock).** This skill writes each shot's prompt AND can generate it on the user's Higgsfield account. Before the first generation, read `skill-packs/higgsfield-protocol.md` (repo root) and follow it exactly: never spend a credit without first showing, on a generation card, the current balance (`balance`), the exact cost (same params + `get_cost: true`) and the balance after — then STOP and generate only after an explicit "ok" to that card. Wherever this file tells the user to run, paste, attach or generate a prompt in their own tool, show the generation card instead (the settings table maps onto it; approved results feed later steps by `job_id`). If the user says "só o prompt" / wants to run it themselves, hand off as before (prompt + settings table + attachments).
 
 ---
 

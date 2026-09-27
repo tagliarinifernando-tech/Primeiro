@@ -4,8 +4,10 @@ Pacotes de skills importados. As skills em si ficam em `.claude/skills/`; aqui f
 e o guia de projeto original de cada pacote (`project-guide.md`, que era o `CLAUDE.md` do pacote),
 guardados como referência.
 
-Todas estas skills **só escrevem prompts**: nunca geram imagem ou vídeo. Você cola o prompt no
-gerador que usa.
+Todas estas skills escrevem os prompts **e podem gerar o resultado na sua conta Higgsfield** —
+mas só depois de mostrar seu saldo, o custo exato em créditos e receber seu **ok**. As regras
+estão em [`higgsfield-protocol.md`](higgsfield-protocol.md). Se quiser rodar em outra ferramenta,
+responda **só o prompt**.
 
 | Pacote | Comando(s) | O que faz |
 |---|---|---|
@@ -15,7 +17,7 @@ gerador que usa.
 | [The Prompt Director](pink-prompt-director/) | `/image-prompter` → `/video-prompter` | Personagem, character sheet e cenário → prompt de vídeo Seedance |
 | [The Ad Director](the-ad-director/) | `/ad-assets` → `/ad-director` | Personagem, cena e produto → anúncio cinematográfico dividido em takes, um prompt por take |
 | [Motion Design — Paper-Cut](motion-design/) | `/motion-design` | Uma imagem → vídeo stop-motion de colagem de papel (prompt paper-cut → folha de 9 painéis → animação) |
-| [Vox Animations](vox-animations/) | `/vox-animation` | Ideia → vídeo explicativo narrado estilo Vox (~60s). Exceção à regra acima: gera a narração (edge-tts) e monta o MP4 final (ffmpeg) localmente |
+| [Vox Animations](vox-animations/) | `/vox-animation` | Ideia → vídeo explicativo narrado estilo Vox (~60s). Também gera a narração (edge-tts) e monta o MP4 final (ffmpeg) localmente |
 
 Fluxo sugerido para produto: `/studio-shot` (foto limpa) → `/product-visuals` (produto em cena).
 

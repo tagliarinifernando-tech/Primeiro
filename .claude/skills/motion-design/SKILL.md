@@ -1,18 +1,18 @@
 ---
 name: motion-design
 description: >
-  Drop one image and get the prompts to make a handcrafted paper-cut stop-motion video in ANY image/video tools you already use. Trigger whenever the user wants a paper-cut / torn-paper / paper-collage / stop-motion assembly / "motion design" animation and does NOT have Higgsfield — this skill writes the prompts, the user runs the generations in their own tools. Standalone, no Higgsfield, no credits.
+  Drop one image and get a handcrafted paper-cut stop-motion video: the skill writes the three prompts (paper-cut image, 9-panel sheet, animation) and generates each step on the user's Higgsfield account only after showing the credit cost and getting an ok (or hands over the prompts to run in any other tool). Trigger whenever the user wants a paper-cut / torn-paper / paper-collage / stop-motion assembly / "motion design" animation.
 ---
 
 # Motion Design — Paper-Cut (Prompt Mode)
 
 Drop one image → this walks you through making a handcrafted **stop-motion paper-collage**
-video using **whatever AI tools you already have**. It does NOT generate anything itself —
-it **looks at what you drop and writes the exact prompt** for each step. You run that prompt
-in your own image/video model, drop the result back, and it hands you the next one.
+video. It **looks at what you drop and writes the exact prompt** for each step, then generates
+it on your Higgsfield account — **only after you see the credit cost and say ok** (or you run the
+prompt in your own tool and drop the result back). Then it hands you the next one.
 
-Three prompts, one workflow: **paper-cut image → 9-panel sheet → animation.** No Higgsfield,
-no credits.
+Three prompts, one workflow: **paper-cut image → 9-panel sheet → animation.** No credit
+is spent unless you approve the cost of a generation.
 
 ## How to run this skill (read first)
 
@@ -22,7 +22,8 @@ no credits.
 - **Formatting matters a lot here.** Every prompt goes in its own fenced ```code block``` so
   it's one-click copyable. Every hand-off is a clean **brief** (see the exact shapes below) —
   short labelled lines, blank lines for breathing room, never a wall of text.
-- This skill only **reads images and writes prompts** — it never runs a generation.
+- **Generation — only with the user's OK (hard lock).** This skill writes the prompt AND can generate it on the user's Higgsfield account. Before the first generation, read `skill-packs/higgsfield-protocol.md` (repo root) and follow it exactly: never spend a credit without first showing, on a generation card, the current balance (`balance`), the exact cost (same params + `get_cost: true`) and the balance after — then STOP and generate only after an explicit "ok" to that card. Wherever this file tells the user to run, paste, attach or generate a prompt in their own tool, show the generation card instead (the settings table maps onto it; approved results feed later steps by `job_id`). If the user says "só o prompt" / wants to run it themselves, hand off as before (prompt + settings table + attachments).
+- In this repo each "**Now generate it:**" brief becomes the generation card (image steps: `gpt_image_2`, quality high; video step: `seedance_2_5`, 10s, 720p, your aspect, audio on). An approved result is used by the next step via its `job_id` — no need to save it into `reference/`. The user's own starting image is uploaded to Higgsfield per the protocol.
 
 ---
 
@@ -187,6 +188,6 @@ Offer: run another image (back to Step 1), redo a step's prompt, or done.
   steps, **Seedance 2.0** for the video step. Platform stays "your preferred … platform"; the
   Model line is fixed. Keep each brief to: platform → model → (aspect ratio for the sheet) →
   attach → save. Never list a menu of tools or extra attachments.
-- This skill runs **no generations** — it only writes prompts and detects what you drop back.
+- This skill generates **only through the gate** (balance + cost card + explicit ok); otherwise it writes prompts and detects what you drop back.
 - If the user would rather just **paste a generated image into the chat** instead of saving to
   `reference/`, that's fine too — look at the attached image and continue.
