@@ -1,0 +1,35 @@
+feature,area,priority,original,clone,notes
+Caixa de pergunta clínica em linguagem natural,pergunta,must,yes,no,S03
+Resposta curta e estruturada em streaming,resposta,must,yes,no,S04
+Citações numeradas inline ligadas a cada afirmação,resposta,must,yes,no,S04 - só citar o que a fonte sustenta
+Lista de referências com título periódico ano e link PubMed/DOI,resposta,must,yes,no,S04 S05
+Expandir abstract da referência,resposta,must,yes,no,S05 - abstracts via PubMed E-utilities
+Recusar ou sinalizar quando a evidência é insuficiente,resposta,must,yes,no,original declara recusar quando inconclusivo
+Perguntas de seguimento na mesma conversa,conversa,must,yes,no,F02
+Busca em literatura aberta (PubMed PMC Europe PMC),fontes,must,yes,no,original usa 35M artigos + licenciados; clone só fontes abertas
+Aviso de que não substitui julgamento clínico,resposta,must,yes,no,obrigatório por responsabilidade
+Login com e-mail e Apple/Google,conta,must,yes,no,S01 - pode reutilizar o login do ImunoChoix
+Acesso restrito a profissionais verificados,conta,must,yes,no,original usa NPI; clone usa CRM + UF
+Histórico de conversas,histórico,must,yes,no,S06
+Funciona no iPhone e na web,plataforma,must,yes,no,dentro do app ImunoChoix
+Selo de força da evidência por referência,resposta,should,yes,no,EvidenceGrade no original; definir escala própria (ex. tipo de estudo)
+Sugestões de perguntas relacionadas,conversa,should,yes,no,S04
+Compartilhar resposta por link,compartilhar,should,yes,no,S07
+Curtir/não curtir resposta,resposta,should,unknown,no,inferido; útil para avaliar qualidade
+Busca no histórico,histórico,should,unknown,no,inferido
+Pesquisa aprofundada (DeepConsult) com relatório longo,pesquisa,should,yes,no,S08
+Mostrar como estudos conflitantes foram pesados,pesquisa,should,yes,no,Reasoning Trace
+Responder em português a partir de literatura em inglês,idioma,should,yes,no,original é multilíngue
+Excluir conta,conta,should,unknown,no,exigido pela Apple para apps com cadastro
+Alerta de nova evidência sobre pergunta antiga,alertas,could,yes,no,F07 - e-mail ou push
+Modo voz,pergunta,could,yes,no,lançado em 2026
+Calculadoras clínicas,ferramentas,could,yes,no,S10 - original tem 50+; escolher as das 3 especialidades
+Busca em ensaios clínicos abertos,fontes,could,yes,no,ClinicalTrials.gov API
+Filtro por especialidade (dermato reumato gastro),fontes,could,no,no,não existe no original; foco do ImunoChoix
+Diretrizes brasileiras (SBD SBR FBG),fontes,could,no,no,não existe no original; exige autorização das sociedades
+Texto completo de NEJM JAMA Nature NCCN Cochrane,fontes,must,yes,skip,conteúdo licenciado por contrato deles
+Modelo de IA próprio treinado em literatura médica,IA,should,yes,skip,clone usa modelo via API + RAG
+Verificação por NPI,conta,must,yes,skip,específico dos EUA; substituído por CRM + UF
+Créditos CME/MOC,educação,could,yes,skip,depende de acreditação americana
+Anúncios farmacêuticos,receita,could,yes,skip,decisão de negócio; regras de publicidade no Brasil
+Visits (transcrição de consulta e codificação CPT),visits,could,yes,skip,outro produto; dados de paciente e LGPD
