@@ -1,0 +1,65 @@
+feature,area,priority,original,clone,notes
+Login com e-mail e senha por usuário,acesso,must,yes,no,S01
+Papéis e permissões (recepção não vê financeiro),acesso,must,yes,no,S23; LGPD
+Log de auditoria de edições e exclusões,acesso,must,partial,no,S25; Pipedrive tem changelog por item
+Vários funis com etapas configuráveis,demandas,must,yes,no,S20
+Kanban com arrastar e soltar entre etapas,demandas,must,yes,no,S03
+Criar demanda rápida com paciente inline,demandas,must,yes,no,S05 F01
+Responsável por demanda e filtro por responsável,demandas,must,yes,no,S03
+Card parado fica vermelho após N dias (rotting),demandas,must,yes,no,KB rotting
+Alerta de card sem próxima atividade,demandas,must,yes,no,S03
+Detalhe da demanda com linha do tempo e notas,demandas,must,yes,no,S06
+Marcar ganho/perdido com motivo de perda,demandas,must,yes,no,KB lost reasons
+Atividades com data e responsável (ligar/WhatsApp/tarefa),atividades,must,yes,no,S09
+Minhas atividades de hoje e atrasadas,atividades,must,yes,no,S02
+Cadastro de pacientes com busca por nome/telefone,pacientes,must,yes,no,S07
+Ficha do paciente com demandas e pagamentos,pacientes,must,partial,no,S08
+Tabela de procedimentos e preços,procedimentos,must,yes,no,S22 (= Products)
+Contas: bancos + caixa físico,financeiro,must,no,no,S21
+Maquininhas com taxa por modalidade e prazo de recebimento,financeiro,must,no,no,S21 FeeRule
+Lançar recebimento com dinheiro/PIX/débito/crédito,financeiro,must,no,no,S12
+Dividir um pagamento em várias formas,financeiro,must,no,no,S12 F03
+Crédito parcelado gera parcelas futuras com taxa e data,financeiro,must,partial,no,Pipedrive tem parcelas sem taxa nem data de crédito
+Lançar despesa com categoria e vencimento,financeiro,must,no,no,S13
+Despesa recorrente (mensal / N vezes),financeiro,must,no,no,F05
+Extrato de lançamentos com bruto/taxa/líquido e filtros,financeiro,must,no,no,S11
+Status previsto/realizado por parcela,financeiro,must,no,no,S14
+Saldo atual por conta,financeiro,must,no,no,S10
+Painel: entradas x saídas do mês por forma de pagamento,financeiro,must,no,no,S10
+Projeção de caixa 12 meses (mês a mês),financeiro,must,partial,no,S16; Pipedrive só prevê receita
+Contas a pagar com vencidas destacadas,financeiro,must,no,no,S15
+Registrar pagamento direto do card ganho,ponte,must,no,no,S06 -> S12
+Visão em lista com colunas configuráveis e exportar CSV,demandas,should,yes,no,S04
+Origem do paciente (Instagram/indicação/Google),pacientes,should,yes,no,relatórios de marketing
+Itens de procedimento orçados na demanda,demandas,should,yes,no,DemandItem
+Calendário semanal de atividades da equipe,atividades,should,yes,no,S09
+Agenda de recebíveis de cartão por dia/maquininha,financeiro,should,no,no,S14
+Marcar parcela como recebida / atrasada,financeiro,should,no,no,F07
+Fechamento de caixa diário (esperado x contado),financeiro,should,no,no,S17 F06
+Estorno/cancelamento de pagamento (cancela parcelas futuras),financeiro,should,no,no,F03 edge
+Alerta de saldo previsto negativo,financeiro,should,no,no,S16
+Projeção dia a dia do mês corrente,financeiro,should,no,no,S16
+Categorias e plano de contas configuráveis,financeiro,should,no,no,S21
+Anexar comprovante/boleto/nota ao lançamento,financeiro,should,yes,no,S13 (Files)
+DRE simplificado,relatórios,should,no,no,S19
+Receita por procedimento e por forma de pagamento,relatórios,should,partial,no,S19
+Conversão do funil e motivos de perda,relatórios,should,yes,no,S19 Insights
+Uso no celular (layout responsivo),geral,should,yes,no,F08
+Backup automático diário,geral,should,yes,no,dados sensíveis
+Automações gatilho -> ação,automações,could,yes,no,S24 KB workflow automation
+Importar extrato OFX/CSV e conciliar,financeiro,could,no,no,S18
+Simular antecipação de recebíveis,financeiro,could,no,no,S14
+Taxa média paga à maquininha (relatório),relatórios,could,no,no,S19
+Centros de custo,financeiro,could,no,no,S21
+Importar pacientes de planilha,pacientes,could,yes,no,
+Mensagem de WhatsApp via API oficial (WhatsApp Business),integrações,could,partial,no,só API oficial da Meta
+Emissão de NFS-e via serviço com API,integrações,could,no,no,depende da prefeitura
+Integração com API oficial da adquirente,integrações,could,no,no,Stone/Cielo/Rede quando houver API pública
+Metas (faturamento mensal),relatórios,could,yes,no,API Goals
+Integração com agenda/prontuário que a clínica já usa,integrações,could,no,no,depende do sistema
+Prontuário eletrônico,clínico,skip,no,skip,regras CFM/SBIS; não é o problema descrito
+Faturamento de convênio TISS,clínico,skip,no,skip,só se atender convênio
+Open Finance (ler banco direto),financeiro,skip,no,skip,exige instituição autorizada pelo Banco Central; usar OFX
+Marketplace de apps do Pipedrive,integrações,skip,yes,skip,rede de parceiros do Pipedrive
+LeadBooster / Campaigns / prospecção,marketing,skip,yes,skip,produto de prospecção B2B; não se aplica
+Assistente de IA do Pipedrive,demandas,skip,yes,skip,recurso proprietário; pode virar ideia própria depois
