@@ -8,3 +8,6 @@ remotion/public/CRU2.mov
 remotion/public/audio/
 remotion/frame*.png
 remotion/kf_*.png
+# Playwright CLI output (may contain credentials)
+.playwright-cli/
+.playwright/
