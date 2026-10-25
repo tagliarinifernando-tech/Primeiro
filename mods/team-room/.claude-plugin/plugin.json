@@ -1,0 +1,6 @@
+{
+  "name": "team-room",
+  "version": "0.1.0",
+  "description": "A Team pane with every message between your Claude Code sessions, and /standup to ask each one for a one-line update.",
+  "types": "./types/index.d.ts"
+}

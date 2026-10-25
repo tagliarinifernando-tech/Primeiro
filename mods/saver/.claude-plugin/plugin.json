@@ -1,0 +1,6 @@
+{
+  "name": "saver",
+  "version": "0.1.0",
+  "description": "Sends easy prompts to Claude Haiku 5.5 and shows what that saved, in a strip above the prompt.",
+  "types": "./types/index.d.ts"
+}

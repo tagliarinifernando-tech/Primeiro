@@ -1,0 +1,10 @@
+{
+  "name": "primeiro-mods",
+  "owner": { "name": "Fernando Tagliarini" },
+  "metadata": { "description": "Claude Code mods: saver, dashboard and team-room." },
+  "plugins": [
+    { "name": "saver", "source": "./mods/saver", "description": "Sends easy prompts to Claude Haiku 5.5 and shows what that saved." },
+    { "name": "dashboard", "source": "./mods/dashboard", "description": "A /painel pane with to-dos, emails waiting on you and today's calendar." },
+    { "name": "team-room", "source": "./mods/team-room", "description": "A Team pane for messages between sessions, and /standup." }
+  ]
+}

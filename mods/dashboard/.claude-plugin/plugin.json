@@ -1,0 +1,6 @@
+{
+  "name": "dashboard",
+  "version": "0.1.0",
+  "description": "A /dashboard pane with your to-dos, the emails waiting on you and today's calendar, plus a one-line summary above the prompt.",
+  "types": "./types/index.d.ts"
+}
